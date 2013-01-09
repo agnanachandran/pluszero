@@ -1,0 +1,78 @@
+body {
+				font-family: arial, helvetica, sans-serif;
+				font-size: 80%;
+				color: black;
+				background: white url(images/bg-white.png) repeat top left;	
+				margin: 2em;
+				padding: 0;
+}
+
+/* By the way, this is a comment */
+
+p {
+				padding:3em;
+				font-size:1.5em;
+				line-height: 1.5em;
+				text-shadow: 1px 1px 1px #fff;
+}
+
+h1 {
+				color: #000000;
+				font-size: 3em;
+				margin: 0;
+				text-shadow: 1px 1px 1px #000;
+				margin-bottom: 0.2em;
+				padding: 0.3em;
+				text-align: center;
+				letter-spacing: 0.5em;
+				border-bottom-style: solid;
+				border-bottom-width: 0.2em;
+				border-bottom-color: #000;
+}
+
+h2 {
+				color: white;
+				font-size: 1em;
+				margin: 0;
+				padding: 0.1em;
+				padding-left: 1em;
+}
+
+h3 {
+				color: #999;
+				font-size: 1.25em;
+}
+
+img {
+				border-style: dashed;
+				border-width: 2px;
+				border-color: #ccc;
+}
+
+a {
+				color: #7EFFFF;
+				padding: 5px;
+				text-decoration: none;
+}
+
+#ulnav {
+				text-align:center;
+}
+#nav li{
+				text-align:left;
+				padding:5%;
+				display:inline;
+				margin-right:0%;
+				text-shadow: 1px 1px 0.5px #000;
+				text-decoration:none;
+				font-size:2em;
+}
+strong {
+				font-style: italic;
+				text-transform: uppercase;
+}
+
+table {
+				background-color: #ccc;
+}
+
