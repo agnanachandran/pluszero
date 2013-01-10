@@ -1,25 +1,51 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html>
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>plusZero > Projects</title>
+	<link rel="stylesheet" type="text/css" href="css/proj.css"/>
+	<script type="text/javascript" src = "js/jquery.js"></script>
+	<script type = "text/javascript" src = "js/script.js"></script>
+	<script type="text/javascript">
 
-		<title>Projects</title>
-		<link rel="stylesheet" type="text/css" href="web.css" />
-	</head>
-	<body>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-37138007-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	</script>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body>
+	<div id = "mainhead">
 		<h1>Anojh Gnanachandran</h1>
 		<span id = "ulnav">
 			<ul id="nav">
-				<li><a href="index.html">Home</a></li>	
-				<li><a href="aboutme.html">About Me</a></li>
-				<li><a href="resume.html">Resume</a></li>
-				<li><a href="projects.html">Projects</a></li>
-				<li><a href="https://github.com/agnanachandran">GitHub</a></li>
+				<li><a class = "glow" href="index.html" title = "Home">Home</a></li>	
+				<li><a class = "glow" href="/blog" title = "My blog: Things to Think About">Blog</a></li>
+				<li><a class = "glow" href="projects.html" title = "Projects I've been working on">Projects</a></li>
+				<li><a class = "glow" href="resume.html" title = "Resume">Resume</a></li>
+				<li><a class = "glow" href="https://github.com/agnanachandran" title = "GitHub">GitHub</a></li>
 			</ul>
 		</span>
-		<p>This is my page.</p>
-	</body>
-</html>
+		<div class = "divide"> </div>
+	</div>
 
+	<h2 id = "head"><br>Projects</h2>
+	<ul>
+		<li id = "projtext"><strong>GradeTrackr</strong>: <a href = "https://github.com/agnanachandran/gradebook-android">An Android app</a> available from the Play Store <!-- Insert href here to playstore link--> used to manage your grades, calculate your GPA, organize your tasks, and more. </li>
+		<li id = "projtext"><strong>Fun with Matrices</strong>: <a href = "https://github.com/agnanachandran/matrices-linalg">A Java application</a> developed with the Swing API.</li>
+
+</body>
+</html>
