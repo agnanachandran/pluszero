@@ -32,16 +32,22 @@ h2 {
 	text-align: center;
 }
 
-#projtext {
-	text-shadow:black 0.1em 0.1em 0.1em;
+#plusZero{
+
 }
-#projtext a{
+.projtext {
+	text-shadow:black 0.1em 0.1em 0.1em;
+	display: none;
+}
+.projtextnojs {
+	display: inline;
+}
+.projtext a{
 	color:#eee;
 	text-decoration:none;
-	
 	border-bottom:.1em dotted;
 }
-#projtext strong{
+.projtext strong{
 	text-shadow:black 0.07em 0.07em 0.07em;
 }
 h3 {
@@ -147,8 +153,12 @@ a {
 	right:1%;
 }
 
-#projhead {
+#head, #headnojs{
 	text-align:center;
+}
+
+#head {
+	display: none;
 }
 
 #endofpagenojs {

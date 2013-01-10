@@ -23,13 +23,13 @@ h1 {
 }
 
 h2 {
-	font-size:1.5em;
-	line-height:.8em;
-	color:#000;
-	text-shadow:.5px .5px .7px #000;
+	font-size:6em;
+	line-height: 100%;
+	text-shadow: black 0.1em 0.1em 0.2em;
 	font-family:'Open Sans', Arial;
 	font-weight:400;
-	margin:.3em;
+	margin: 0 auto;
+	text-align: center;
 }
 
 h3 {
@@ -106,6 +106,10 @@ a {
 	bottom:0;
 	margin:.2em;
 	padding:0;
+}
+
+#plusZero{
+display: none;
 }
 
 .mainpagetext {
