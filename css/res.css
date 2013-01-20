@@ -38,11 +38,17 @@ h1 {
 }
 
 h3 {
-	max-height: 0.7em;
+	font-size: 1.25em;
+	max-height: 0.5em;
 }
 
 h4 {
-	max-height: 0.5em;
+	font-size: 1.04em;
+	max-height: 0.4em;
+}
+
+p, li {
+	font-size: 1.05em;
 }
 
 #divline {
@@ -57,8 +63,8 @@ h4 {
 	padding-top: 0.1em;
 }
 
-a{
-	color:#444;
+a, #right{
+	color:#000;
 	text-decoration:none;
-	border-bottom:.1em dotted;
+	/*border-bottom:0.11em dotted;*/
 }
