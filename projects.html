@@ -1,59 +1,49 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<title>plusZero > Projects</title>
 	<link rel="stylesheet" type="text/css" href="css/proj.css"/>
-	<script type="text/javascript" src = "js/jquery.js"></script>
-	<script type = "text/javascript" src = "js/proj.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/proj.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-37973526-1']);
+_gaq.push(['_trackPageview']);
 
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-37973526-1']);
-	_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
 
-	(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-
-	</script>
-
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
-
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 
 </head>
-<body>
-	<div id = "mainhead">
-		<h1>Anojh Gnanachandran</h1>
-		<span id = "ulnav">
-			<ul id="nav">
-				<li><a class = "glow" href="index.html" title = "Home">Home</a></li>	
-				<li><a class = "glow" href="/blog" title = "My blog: Things to Think About">Blog</a></li>
-				<li><a class = "glow" href="projects.html" title = "Projects I've been working on">Projects</a></li>
-				<li><a class = "glow" href="resume.html" title = "Resume">Resume</a></li>
-				<li><a class = "glow" href="https://github.com/agnanachandran" title = "GitHub">GitHub</a></li>
-			</ul>
-		</span>
-		<div class = "divide"> </div>
-	</div>
-
-	<h2 id = "head"><br>Projects</h2>
+<body id="main-page-top">
+	<section class="content">
+		<section id="header">
+			<h1><a class="orangeglow" href="/">anojh gnanachandran</a></h1>
+			<nav>
+				<ul id="nav">
+					<li><a class="orangeglow" href="/" title="Home">home</a></li>	
+					<li><a class="orangeglow" href="/blog" title="My blog: Things to Think About">blog</a></li>
+					<li><a class="orangeglow" href="projects.html" title="Projects I've been working on">projects</a></li>
+					<li><a class="orangeglow" href="resume.html" title="Resume">resume</a></li>
+					<li><a class="orangeglow" href="https://github.com/agnanachandran" title="GitHub">github</a></li>
+				</ul>
+			</nav>
+			<div class="divide"></div>
+		</section>
+	<h2 class="center"><br>Projects</h2>
 	<ul>
 		<li class = "projtext"><strong>GradeTrackr</strong>: <a class = "link" href = "https://github.com/agnanachandran/gradebook-android">An Android app</a> available from the Play Store <!-- Insert href here to playstore link--> used to manage your grades, calculate your GPA, organize your tasks, and more. </li>
-		<li class = "projtext"><strong>Fun with Matrices</strong>: <a class = "link" href = "https://github.com/agnanachandran/matrices-linalg">A Java application</a> developed with the Swing API.</li>
+		<li class = "projtext"><strong>Fun with Matrices</strong>: <a class = "link" href = "https://github.com/agnanachandran/linalg-matrices">A Java application</a> developed with the Swing API.</li>
 	</ul>
-	<noscript>
-		<h2 id = "headnojs"><br>Projects</h2>
-		<ul>
-			<li class = "projtextnojs"><strong>GradeTrackr</strong>: <a href = "https://github.com/agnanachandran/gradebook-android">An Android app</a> available from the Play Store <!-- Insert href here to playstore link--> used to manage your grades, calculate your GPA, organize your tasks, and more. </li>
-			<li class = "projtextnojs"><strong>Fun with Matrices</strong>: <a href = "https://github.com/agnanachandran/matrices-linalg">A Java application</a> developed with the Swing API.</li>
-		</ul>
-	</noscript>
-
+	</section>
 </body>
 </html>
