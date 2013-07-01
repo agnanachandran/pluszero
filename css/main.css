@@ -4,7 +4,6 @@ html {
 body {
     min-width: 767px;
     margin: 0 auto;
-    background-color: #FCFAFA;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
@@ -80,7 +79,7 @@ p, li {
     display: none;
 }
 #main-page-top {
-    background: transparent url(../images/bg-line-tan.png) repeat center top;
+    background: transparent url(../images/subtle_dots.png) repeat center top;
     padding-bottom: 2em;
     margin-bottom: 1em;
 }
@@ -109,7 +108,7 @@ p, li {
 }
 
 .blog-projects-title {
-
+    font-family: Alef, Helvetica, Arial, sans-serif !important;
 }
 
 #main-page-bottom {

@@ -4,7 +4,7 @@ html {
 body {
     min-width: 767px;
     margin: 0 auto;
-    background-color: #FCFAFA;
+    background: transparent url(../images/subtle_dots.png) repeat center top;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
@@ -83,7 +83,6 @@ p, li {
     display: none;
 }
 #main-page-top {
-    background: transparent url(../images/bg-line-tan.png) repeat center top;
     padding-bottom: 2em;
     margin-bottom: 1em;
 }
@@ -96,6 +95,7 @@ p, li {
 
 .projtext {
 	margin-bottom: 1em;
+    display: none;
 }
 
 #projects-link {

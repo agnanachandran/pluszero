@@ -12,7 +12,7 @@
 //holo color:#00ddff
 
 $(document).ready(function() {
-	$('.projtext').fadeIn('slow');
+	$('.main-page-text').fadeIn('slow');
 	$('#endofpage').fadeIn('slow');
 	$('#plus-zero').fadeIn('slow');
 	$(".orangeglow").hover(function(){
