@@ -12,6 +12,17 @@
 //holo color:#00ddff
 
 $(document).ready(function() {
+	$.ajax({
+		url: 'http://blog.pluszero.ca/atom.xml',
+		type: 'GET',
+		dataType: "xml"
+	}).done(function(xml) {
+		$(xml).
+		$.each($("item", xml), function(i, e) {
+			$("#results").append($("enclosure").attr("url").text() + "<br />");
+		});
+	});
+
 	$('.main-page-text').fadeIn('slow');
 	$('#endofpage').fadeIn('slow');
 	$('#plus-zero').fadeIn('slow');
@@ -27,5 +38,10 @@ $(document).ready(function() {
 	}, function(){
 		$(this).animate({color:"#575e5b;"}, 200);
 	});
+	$(".link").hover(function(){
+		$(this).animate({color:"#5575ca"}, 200);
 
+	}, function(){
+		$(this).animate({color:"#575e5b;"}, 200);
+	});
 });

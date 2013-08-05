@@ -95,7 +95,6 @@ p, li {
 
 .projtext {
 	margin-bottom: 1em;
-    display: none;
 }
 
 #projects-link {
@@ -111,7 +110,6 @@ p, li {
 .main-page-text {
     color: #333;
     text-align: center;
-    display: none;
     font-size: 150%;
 }
 

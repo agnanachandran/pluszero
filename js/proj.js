@@ -27,5 +27,11 @@ $(document).ready(function() {
 	}, function(){
 		$(this).animate({color:"#575e5b;"}, 200);
 	});
+	$(".link").hover(function(){
+		$(this).animate({color:"#5575ca"}, 200);
+
+	}, function(){
+		$(this).animate({color:"#575e5b;"}, 200);
+	});
 
 });
