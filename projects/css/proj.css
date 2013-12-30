@@ -1,0 +1,130 @@
+html {
+}
+
+body {
+    min-width: 767px;
+    margin: 0 auto;
+    background: transparent url(../images/subtle_dots.png) repeat center top;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+h1 {
+    font-size: 100%;
+    float: left;
+    text-align: left;
+    text-transform: uppercase;
+    color: #575e5b;
+    font-weight: 700;
+    margin-top: 1em;
+    margin-left: 0.5em;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+h4 {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #575e5b;
+}
+
+p, li {
+    font-weight: 400;
+}
+
+#header {
+
+}
+
+#nav {
+    float: right;
+    text-align: center;
+    margin-right: .1em;
+    margin-bottom: 0.5em;
+}
+#nav li {
+    text-align: center;
+    display: inline-block;
+    color: #575e5b;
+    text-decoration: none;
+    font-size: 90%;
+    padding-left: 0.5em;
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+#footer {
+    padding-right: 1em;
+    color: #000;
+    font-size: .7em;
+    clear: both;
+}
+
+.content {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+.divide {
+    border: .1em solid #000;
+    clear: both;
+    position: relative;
+    margin-top: .1em;
+    padding: 0;
+}
+
+#plus-zero {
+    text-shadow: black 0.1em 0.1em 0.1em;
+    display: none;
+}
+#main-page-top {
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+}
+
+#blog-link {
+    border-left: .1em solid #eee;
+    float: left;
+    height: 10em;
+}
+
+.projtext {
+	margin-bottom: 1em;
+}
+
+#projects-link {
+    border-left: .1em solid #eee;
+    float: right;
+    margin-right: 35%;
+    height: 10em;
+}
+.push-right {
+    margin-left: 1em;
+}
+
+.main-page-text {
+    color: #333;
+    text-align: center;
+    font-size: 150%;
+}
+
+.blog-projects-title {
+
+}
+
+#main-page-bottom {
+}
+
+.center {
+	text-align: center;
+}
+
+::-moz-selection, ::selection {
+    background-color: #dd2020;
+    color: #fff;
+}
