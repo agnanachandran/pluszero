@@ -35,8 +35,14 @@ p, li {
     font-weight: 400;
 }
 
-#header {
-
+hr {
+    margin-top: 5em;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
 
 // nav-bar
@@ -95,7 +101,6 @@ nav ul {
 }
 
 .divide {
-    border: .1em solid #000;
     clear: both;
     position: relative;
     margin-top: .1em;
@@ -106,7 +111,7 @@ nav ul {
     text-shadow: black 0.1em 0.1em 0.1em;
 }
 #main-page-top {
-    background: transparent url(../images/subtle_dots.png) repeat center top;
+    /*background: transparent url(../images/subtle_dots.png) repeat center top;*/
     padding-bottom: 2em;
     margin-bottom: 1em;
 }
@@ -141,8 +146,6 @@ nav ul {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
 }
 
-#main-page-bottom {
-}
 
 .center {
     margin-left: 15%;
