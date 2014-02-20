@@ -9,21 +9,22 @@ h1 {
     float: left;
     text-align: left;
     text-transform: uppercase;
-    color: #575e5b;
+    color: #C0C0C0;
     font-weight: 700;
     margin-top: 1em;
     margin-left: 0.5em;
 }
 
 h2 {
-    font-size: 6em;
-    font-weight: 400;
-    margin: 0 auto;
+    font-size: 3em;
+    font-weight: 300;
     text-align: center;
 }
 
-h4 {
-    color: #333;
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a {
@@ -35,8 +36,14 @@ p, li {
     font-weight: 400;
 }
 
-#header {
-
+hr {
+    margin-top: 5em;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
 
 // nav-bar
@@ -87,12 +94,7 @@ nav ul {
     color: #333;
 }
 
-#footer {
-    padding-right: 1em;
-    color: #000;
-    font-size: .7em;
-    clear: both;
-}
+// /nav-bar
 
 .divide {
     border: .1em solid #000;
@@ -102,46 +104,9 @@ nav ul {
     padding: 0;
 }
 
-#plus-zero {
-    text-shadow: black 0.1em 0.1em 0.1em;
-}
 #main-page-top {
-    background: transparent url(../images/subtle_dots.png) repeat center top;
     padding-bottom: 2em;
     margin-bottom: 1em;
-}
-
-#blog-link {
-    width: 40%;
-    border-left: .1em solid #eee;
-    float: left;
-    height: 10em;
-    display: inline-block;
-}
-
-#projects-link {
-    width: 50%;
-    border-left: .1em solid #eee;
-    float: right;
-    height: 10em;
-    display: inline-block;
-}
-
-.push-right {
-    margin-left: 1em;
-}
-
-.main-page-text {
-    color: #333;
-    text-align: center;
-    font-size: 150%;
-}
-
-.blog-projects-title {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
-}
-
-#main-page-bottom {
 }
 
 .center {
@@ -149,7 +114,7 @@ nav ul {
     margin-right: 15%;
 }
 
-::-moz-selection, ::selection {
-    background-color: #dd2020;
-    color: #fff;
+.real-center {
+    display: inline-block;
+    text-align: center;
 }
