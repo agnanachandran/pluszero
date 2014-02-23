@@ -5,7 +5,6 @@ $nav-item-divider: #ccc
 $nav-item-hover: #fff
 $nav-item-active: #fff
 $nav-item-default: #e3e3e3
-$inner-push-percent: 15%
 
 #name a
   text-decoration: none
@@ -23,7 +22,7 @@ $inner-push-percent: 15%
 
 #name a.name-link-first
   font-weight: 700
-  margin-left: $inner-push-percent
+  margin-left: 0.8em
 
 #name a.name-link-second
   font-weight: 300
@@ -38,7 +37,8 @@ $inner-push-percent: 15%
   background-color: $nav-bar-color
   
 nav
-  margin-right: $inner-push-percent
+  max-width: 1133px
+  margin: 0 auto
 
 nav ul
   -webkit-margin-before: 0em
@@ -76,18 +76,10 @@ nav ul
   text-transform: uppercase
   color: $nav-item-active
 
-hr 
-  margin-top: 5em
-  border: 0
-  height: 1px
+.divide
+  clear: both
+  padding: 0
   //background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0))
   //background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0))
   //background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0))
   //background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0))
-
-.divide
-  clear: both
-  position: relative
-  margin-top: .1em
-  padding: 0
-

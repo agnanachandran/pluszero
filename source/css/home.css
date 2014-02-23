@@ -2,20 +2,35 @@ body {
   background: transparent url(../images/subtle_dots.png) repeat center top;
   padding-bottom: 2em;
   margin-bottom: 1em;
-  min-width: 985px;
+  min-width: 767px;
   margin: 0 auto;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
-
-h2 {
-  font-weight: 400;
-  margin: 0 auto;
-  text-align: center; }
 
 a {
   text-decoration: none; }
 
 p, li {
   font-weight: 300; }
+
+div#footer {
+  margin-top: 20px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #333333;
+  padding: 15px;
+  text-align: center; }
+  div#footer a {
+    margin-top: 25px;
+    color: #e3e3e3;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+  div#footer a:hover {
+    color: white; }
 
 #name a {
   text-decoration: none;
@@ -33,7 +48,7 @@ p, li {
 
 #name a.name-link-first {
   font-weight: 700;
-  margin-left: 15%; }
+  margin-left: 0.8em; }
 
 #name a.name-link-second {
   font-weight: 300;
@@ -49,7 +64,8 @@ p, li {
   background-color: #333333; }
 
 nav {
-  margin-right: 15%; }
+  max-width: 1133px;
+  margin: 0 auto; }
 
 nav ul {
   -webkit-margin-before: 0em;
@@ -87,28 +103,16 @@ nav ul {
   text-transform: uppercase;
   color: white; }
 
-hr {
-  margin-top: 5em;
-  border: 0;
-  height: 1px; }
-
 .divide {
   clear: both;
-  position: relative;
-  margin-top: 0.1em;
   padding: 0; }
 
 h2#plus-zero {
   font-size: 6em;
   font-weight: 400;
-  margin: 0 auto;
-  text-align: center; }
-
-.divide {
-  clear: both;
-  position: relative;
-  margin-top: 0.1em;
-  padding: 0; }
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 20px; }
 
 #plus-zero {
   text-shadow: black 0.1em 0.1em 0.1em; }
@@ -117,3 +121,24 @@ h2#plus-zero {
   color: #333333;
   text-align: center;
   font-size: 150%; }
+
+canvas {
+  border: 1px solid #999999;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  opacity: 0; }
+
+#play-pong {
+  color: #428bca;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+#play-pong:hover {
+  color: #2a6496;
+  text-decoration: underline; }
