@@ -24,11 +24,12 @@ div#footer {
   div#footer a {
     margin-top: 25px;
     color: #e3e3e3;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease; }
+    -o-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -khtml-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
   div#footer a:hover {
     color: white; }
 
@@ -90,11 +91,12 @@ nav ul {
 .nav-item a {
   text-decoration: none;
   color: #e3e3e3;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+  -o-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -khtml-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear; }
 
 .nav-item a:hover {
   color: white; }
