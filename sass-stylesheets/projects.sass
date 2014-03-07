@@ -1,11 +1,15 @@
 @import 'default'
 @import 'nav'
 
+$row-height: 350px
+$row-half-width: 30%
+
 h2#title
   font-size: 3em
   font-weight: 400
   margin: 0 auto
   text-align: center
+  margin-bottom: 1em
 
 a
   color: $link-blue
@@ -19,3 +23,55 @@ a:hover
   color: $link-blue-hover
 .link:hover
   text-decoration: underline
+
+.project-title
+  font-size: 2.5em
+  -webkit-margin-before: 0em
+  -webkit-margin-after: 0em
+  margin-top: 0.5em
+  margin-bottom: 0.8em
+
+.info-section
+  height: $row-height
+  width: $row-half-width
+  padding-top: 0.5em
+  padding-bottom: 0.5em
+
+.img-section
+  height: $row-height
+  width: $row-half-width
+  padding-top: 0.5em
+  padding-bottom: 0.5em
+
+.push-left
+  float: left
+  padding-top: 2em
+  padding-left: 20%
+
+.push-right
+  float: right
+  padding-top: 2em
+  padding-right: 20%
+
+.project-specs-title
+  -webkit-margin-before: 0em
+  -webkit-margin-after: 0em
+  margin-top: 3em
+  margin-bottom: 1em
+  color: gray
+
+.project-specs-info
+  -webkit-margin-before: 0em
+  -webkit-margin-after: 0em
+  margin-bottom: 1.5em
+  color: gray
+
+.image
+  width: 500px
+  height: 300px
+
+.white
+  background-color: white
+
+.gray
+  background-color: #eee

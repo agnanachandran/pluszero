@@ -12,9 +12,9 @@ function playPong() {
     var canvas = document.getElementById('pong');
     canvas.addEventListener('mousemove', trackPosition, true); // trackPosition is the callback for the listener
     // Check if user has canvas feature with canvas.getContext
-    // if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
-    // }
+    if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+    }
     var WIDTH = canvas.width;
     var HEIGHT = canvas.height;
     ctx.fillRect(0, 0, WIDTH, HEIGHT);
@@ -28,17 +28,19 @@ function playPong() {
     var loadingAlpha = 0.0;
 
     // Constants
-    var BALL_ORIG_X = 50;
+    var BALL_ORIG_X = 70;
     var BALL_ORIG_Y = 50;
     var BALL_ORIG_VX = 4;
     var BALL_ORIG_VY= 8;
+    var INNER_PADDING = 40;
+
     var score = 0;
     var gameStarted = false;
 
     ball = {
         x: BALL_ORIG_X,
         y: BALL_ORIG_Y,
-        r: 5,
+        r: 6,
         vx: 4,
         vy: 8,
 
@@ -54,7 +56,7 @@ function playPong() {
         this.h = 100;
         this.w = 5;
         this.color = "#444";
-        this.x = (pos === 'left') ? 0 : WIDTH - this.w;
+        this.x = (pos === 'left') ? INNER_PADDING : WIDTH - INNER_PADDING - this.w;
         this.y = HEIGHT/2 - this.h/2; // Draw at vertical middle
     }
 
@@ -63,9 +65,17 @@ function playPong() {
 
     function paintCanvas() {
         ctx.clearRect(0, 0, WIDTH, HEIGHT);
+        ctx.beginPath();
+        ctx.moveTo(INNER_PADDING, 0);
+        ctx.strokeStyle = "#9f1024";
+        ctx.lineTo(INNER_PADDING, HEIGHT);
+        ctx.moveTo(WIDTH - INNER_PADDING, 0);
+        ctx.lineTo(WIDTH - INNER_PADDING, HEIGHT);
+        ctx.stroke();
     }
 
     function fadeInDraw() {
+        // TODO: most of these calls are unnecessary
         paintCanvas();
         drawPaddles();
         ball.draw(loadingAlpha);
@@ -116,23 +126,26 @@ function playPong() {
     function checkCollisions() {
         var leftPaddle = paddles[0];
         var rightPaddle = paddles[1];
-        if (ball.x + ball.r > WIDTH) { // Right side
-            ball.x = HEIGHT - ball.r;
+
+        var RIGHT_SIDE = WIDTH - INNER_PADDING;
+        var LEFT_SIDE = INNER_PADDING;
+        // Game over 
+        if (ball.x - ball.r/2 > RIGHT_SIDE - rightPaddle.w) { // Right side
+            //ball.x = WIDTH - ball.r;
             gameOver();
-        } else if (ball.x < 0) { // Left side
-            ball.x = ball.r;
+        } else if (ball.x + ball.r/2 < LEFT_SIDE) { // Left side
             gameOver();
-        } else if (ball.y + ball.r > HEIGHT) { // Top side
+        } else if (ball.y + ball.r > HEIGHT) { // Bottom side
             ball.vy = -ball.vy;
             ball.y = HEIGHT - ball.r;
-        } else if (ball.y < 0) { // Bottom side
+        } else if (ball.y - ball.r < 0) { // Top side
             ball.vy = -ball.vy;
-            ball.y = 0;
-        } else if (ball.x - ball.r < leftPaddle.x && ball.y < leftPaddle.y + leftPaddle.h && ball.y > leftPaddle.y) { // Left paddle
+            ball.y = ball.r;
+        } else if (ball.x - leftPaddle.w < leftPaddle.x && ball.y < leftPaddle.y + leftPaddle.h && ball.y > leftPaddle.y) { // Left paddle
             ball.vx = -ball.vx;
             ball.x = leftPaddle.x + leftPaddle.w;
             increaseScore();
-        } else if (ball.x + ball.r > rightPaddle.x && ball.y < rightPaddle.y + rightPaddle.h && ball.y > rightPaddle.y) { // Right paddle
+        } else if (ball.x + ball.r > rightPaddle.x + (rightPaddle.w/2) && ball.y < rightPaddle.y + rightPaddle.h && ball.y > rightPaddle.y) { // Right paddle
             if (ball.vx < 0) {
                 ball.vx -= 0.2;
             }
@@ -145,6 +158,14 @@ function playPong() {
         }
     }
 
+    function update() {
+        ball.x += ball.vx;
+        ball.y += ball.vy;
+        updatePaddles();
+        checkCollisions();
+        updateScore();
+    }
+
     function increaseScore() {
         score++;
     }
@@ -152,14 +173,7 @@ function playPong() {
     function updateScore() {
         ctx.fillStyle = "rgba(150, 150, 150, " + roundToThree(loadingAlpha) + ")";
         ctx.font = "30pt Open Sans"
-        ctx.fillText(score.toString(), WIDTH/2, HEIGHT/2);
-    }
-
-    function update() {
-        ball.x += ball.vx;
-        ball.y += ball.vy;
-        updatePaddles();
-        checkCollisions();
+            ctx.fillText(score.toString(), WIDTH/2-10, HEIGHT/2);
     }
 
     function updatePaddles() {
@@ -176,7 +190,6 @@ function playPong() {
         if (gameStarted) {
             draw();
             update();
-            updateScore();
         } else {
             fadeInDraw();
         }
@@ -184,13 +197,19 @@ function playPong() {
 
     function gameOver() {
         ball.x = BALL_ORIG_X;
-        ball.y = BALL_ORIG_Y;
+        ball.y = Math.floor((Math.random()*(HEIGHT - 20)) + 20);
         ball.vx = BALL_ORIG_VX;
-        ball.vy = BALL_ORIG_VY;
+
+        var randomNum = Math.round(Math.random());
+        if (randomNum < 1) {
+            ball.vy = -BALL_ORIG_VY;
+        } else {
+            ball.vy = BALL_ORIG_VY;
+        }
+
         score = 0;
         loadingAlpha = 0.0;
         gameStarted = false;
-        
     }
 
     animationLoop();

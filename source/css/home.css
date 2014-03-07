@@ -1,5 +1,4 @@
 body {
-  background: transparent url(../images/subtle_dots.png) repeat center top;
   padding-bottom: 2em;
   margin-bottom: 1em;
   min-width: 767px;
@@ -108,6 +107,9 @@ nav ul {
 .divide {
   clear: both;
   padding: 0; }
+
+body {
+  background: transparent url(../images/subtle_dots.png) repeat center top; }
 
 h2#plus-zero {
   font-size: 6em;
