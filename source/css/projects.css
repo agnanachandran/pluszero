@@ -108,12 +108,17 @@ nav ul {
   clear: both;
   padding: 0; }
 
+div {
+  display: block; }
+
 h2#title {
   font-size: 3em;
   font-weight: 400;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 1em; }
+  margin-bottom: 0.5em;
+  font-weight: 300;
+  color: gray; }
 
 a {
   color: #428bca;
@@ -136,27 +141,27 @@ a:hover {
   margin-top: 0.5em;
   margin-bottom: 0.8em; }
 
+.project-info {
+  max-width: 500px; }
+
 .info-section {
   height: 350px;
-  width: 30%;
   padding-top: 0.5em;
   padding-bottom: 0.5em; }
 
 .img-section {
   height: 350px;
-  width: 30%;
   padding-top: 0.5em;
   padding-bottom: 0.5em; }
 
 .push-left {
+  clear: both;
   float: left;
-  padding-top: 2em;
-  padding-left: 20%; }
+  padding-top: 2em; }
 
 .push-right {
   float: right;
-  padding-top: 2em;
-  padding-right: 20%; }
+  padding-top: 2em; }
 
 .project-specs-title {
   -webkit-margin-before: 0em;
@@ -173,10 +178,21 @@ a:hover {
 
 .image {
   width: 500px;
-  height: 300px; }
+  height: 250px; }
 
-.white {
-  background-color: white; }
+.std-row {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  background-image: linear-gradient(#fafafa, white); }
 
-.gray {
-  background-color: #eeeeee; }
+.project-container {
+  max-width: 1133px;
+  margin: 0 auto; }
+
+.divider {
+  background: url(../images/divide.png) no-repeat center -65px;
+  height: 55px;
+  margin: 0 auto;
+  border: 0;
+  display: block; }
