@@ -1,6 +1,4 @@
 body {
-  padding-bottom: 2em;
-  margin-bottom: 1em;
   min-width: 767px;
   margin: 0 auto;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
@@ -12,8 +10,6 @@ p, li {
   font-weight: 300; }
 
 div#footer {
-  margin-top: 20px;
-  position: fixed;
   bottom: 0px;
   width: 100%;
   margin: 0 auto;
@@ -21,7 +17,6 @@ div#footer {
   padding: 15px;
   text-align: center; }
   div#footer a {
-    margin-top: 25px;
     color: #e3e3e3;
     -o-transition: all 0.5s linear;
     -moz-transition: all 0.5s linear;
@@ -113,11 +108,10 @@ div {
 
 h2#title {
   font-size: 3em;
-  font-weight: 400;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 0.5em;
-  font-weight: 300;
+  font-weight: 700;
   color: gray; }
 
 a {
@@ -139,18 +133,19 @@ a:hover {
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
   margin-top: 0.5em;
-  margin-bottom: 0.8em; }
+  margin-bottom: 0.8em;
+  color: #333333; }
 
 .project-info {
   max-width: 500px; }
 
 .info-section {
-  height: 350px;
+  height: 400px;
   padding-top: 0.5em;
   padding-bottom: 0.5em; }
 
 .img-section {
-  height: 350px;
+  height: 400px;
   padding-top: 0.5em;
   padding-bottom: 0.5em; }
 
@@ -168,13 +163,13 @@ a:hover {
   -webkit-margin-after: 0em;
   margin-top: 3em;
   margin-bottom: 1em;
-  color: gray; }
+  color: #444444; }
 
 .project-specs-info {
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
   margin-bottom: 1.5em;
-  color: gray; }
+  color: #444444; }
 
 .image {
   width: 500px;
@@ -184,7 +179,7 @@ a:hover {
   display: inline-block;
   width: 100%;
   margin: 0 auto;
-  background-image: linear-gradient(#fafafa, white); }
+  background-image: linear-gradient(#fcfcfc, white); }
 
 .project-container {
   max-width: 1133px;

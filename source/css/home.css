@@ -1,6 +1,4 @@
 body {
-  padding-bottom: 2em;
-  margin-bottom: 1em;
   min-width: 767px;
   margin: 0 auto;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
@@ -12,8 +10,6 @@ p, li {
   font-weight: 300; }
 
 div#footer {
-  margin-top: 20px;
-  position: fixed;
   bottom: 0px;
   width: 100%;
   margin: 0 auto;
@@ -21,7 +17,6 @@ div#footer {
   padding: 15px;
   text-align: center; }
   div#footer a {
-    margin-top: 25px;
     color: #e3e3e3;
     -o-transition: all 0.5s linear;
     -moz-transition: all 0.5s linear;
