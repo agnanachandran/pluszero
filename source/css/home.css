@@ -142,3 +142,6 @@ canvas {
 #play-pong:hover {
   color: #2a6496;
   text-decoration: underline; }
+
+div#footer {
+  position: absolute; }
