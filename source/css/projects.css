@@ -140,19 +140,18 @@ a:hover {
   max-width: 500px; }
 
 .info-section {
-  height: 400px;
   padding-top: 0.5em;
   padding-bottom: 0.5em; }
 
 .img-section {
-  height: 400px;
   padding-top: 0.5em;
   padding-bottom: 0.5em; }
 
 .push-left {
   clear: both;
   float: left;
-  padding-top: 2em; }
+  margin-left: 3.5em;
+  margin-right: 3.5em; }
 
 .push-right {
   float: right;
@@ -173,7 +172,7 @@ a:hover {
 
 .image {
   width: 500px;
-  height: 250px; }
+  height: auto; }
 
 .std-row {
   display: inline-block;
