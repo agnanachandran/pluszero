@@ -13,6 +13,7 @@ div#footer {
   bottom: 0px;
   width: 100%;
   margin: 0 auto;
+  margin-top: 3em;
   background-color: #333333;
   padding: 15px;
   text-align: center; }

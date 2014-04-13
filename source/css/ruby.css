@@ -13,6 +13,7 @@ div#footer {
   bottom: 0px;
   width: 100%;
   margin: 0 auto;
+  margin-top: 3em;
   background-color: #333333;
   padding: 15px;
   text-align: center; }
@@ -131,9 +132,6 @@ img.center {
 a {
   text-decoration: none;
   color: #575e5b; }
-
-p, li {
-  font-weight: 400; }
 
 hr {
   margin-top: 5em;
