@@ -1,9 +1,12 @@
 @import 'default'
 @import 'nav'
 
-$mobile-width: 767px
 $navbar-width: 1133px
 $std-gray: #444444
+
+
+html
+  min-width: $navbar-width
 
 div
   display: block
@@ -52,8 +55,6 @@ a:hover
 .push-left
   clear: both
   float: left
-  margin-left: 3.5em
-  margin-right: 3.5em
 
 .push-right
   float: right
@@ -75,6 +76,9 @@ a:hover
 .image
   width: 500px
   height: auto
+  margin-right: 50px
+  margin-left: 50px
+  display: inline-block
 
 .std-row
   display: inline-block

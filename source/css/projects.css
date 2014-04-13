@@ -103,6 +103,9 @@ nav ul {
   clear: both;
   padding: 0; }
 
+html {
+  min-width: 1133px; }
+
 div {
   display: block; }
 
@@ -149,9 +152,7 @@ a:hover {
 
 .push-left {
   clear: both;
-  float: left;
-  margin-left: 3.5em;
-  margin-right: 3.5em; }
+  float: left; }
 
 .push-right {
   float: right;
@@ -172,7 +173,10 @@ a:hover {
 
 .image {
   width: 500px;
-  height: auto; }
+  height: auto;
+  margin-right: 50px;
+  margin-left: 50px;
+  display: inline-block; }
 
 .std-row {
   display: inline-block;

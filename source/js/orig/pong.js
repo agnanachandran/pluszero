@@ -5,7 +5,7 @@ function playPong() {
 
     window.requestAnimFrame = (function() {
         return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
-            return window.setTimeout(callback, 1000/60);
+            return window.setTimeout(callback, 1000/45); // fps?
         }
     })();
 
@@ -51,7 +51,8 @@ function playPong() {
             ctx.arc(this.x, this.y, this.r, 0, Math.PI*2, false); // last 3 parameters are start angle, finish angle, and false so arc draws clockwise.
             ctx.fill();
         }
-    }
+    };
+
     function Paddle(pos) {
         this.h = 100;
         this.w = 5;
@@ -62,13 +63,16 @@ function playPong() {
 
     paddles.push(new Paddle('left'));
     paddles.push(new Paddle('right'));
-
+    ctx.clearRect(0, 0, WIDTH, HEIGHT);
     function paintCanvas() {
-        ctx.clearRect(0, 0, WIDTH, HEIGHT);
         ctx.beginPath();
         ctx.moveTo(INNER_PADDING, 0);
-        ctx.strokeStyle = "#9f1024";
         ctx.lineTo(INNER_PADDING, HEIGHT);
+        ctx.strokeStyle = "#9f1024";
+        ctx.clearRect(paddles[0].x - 15, 0, paddles[0].w + 20, HEIGHT); // left paddle
+        ctx.clearRect(paddles[1].x - 10, 0, paddles[1].w + 20, HEIGHT); // right paddle
+        ctx.clearRect(WIDTH/2-20, HEIGHT/2 - 35, 60, 60); // score middle area
+        ctx.clearRect(ball.x-20, ball.y-20, 50, 50);
         ctx.moveTo(WIDTH - INNER_PADDING, 0);
         ctx.lineTo(WIDTH - INNER_PADDING, HEIGHT);
         ctx.stroke();
@@ -172,8 +176,8 @@ function playPong() {
 
     function updateScore() {
         ctx.fillStyle = "rgba(150, 150, 150, " + roundToThree(loadingAlpha) + ")";
-        ctx.font = "30pt Open Sans"
-            ctx.fillText(score.toString(), WIDTH/2-10, HEIGHT/2);
+        ctx.font = "30pt Open Sans";
+        ctx.fillText(score.toString(), WIDTH/2-10, HEIGHT/2);
     }
 
     function updatePaddles() {
