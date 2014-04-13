@@ -1,0 +1,3 @@
+[submodule "source/hbng"]
+	path = source/hbng
+	url = git://github.com/agnanachandran/hbng.git
