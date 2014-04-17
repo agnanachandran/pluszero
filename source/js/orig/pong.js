@@ -71,7 +71,6 @@ function playPong() {
         ctx.strokeStyle = "#9f1024";
         ctx.clearRect(paddles[0].x - 15, 0, paddles[0].w + 20, HEIGHT); // left paddle
         ctx.clearRect(paddles[1].x - 10, 0, paddles[1].w + 20, HEIGHT); // right paddle
-        ctx.clearRect(WIDTH/2-20, HEIGHT/2 - 35, 60, 60); // score middle area
         ctx.clearRect(ball.x-20, ball.y-20, 50, 50);
         ctx.moveTo(WIDTH - INNER_PADDING, 0);
         ctx.lineTo(WIDTH - INNER_PADDING, HEIGHT);
@@ -133,26 +132,21 @@ function playPong() {
 
         var RIGHT_SIDE = WIDTH - INNER_PADDING;
         var LEFT_SIDE = INNER_PADDING;
-        // Game over 
-        if (ball.x - ball.r/2 > RIGHT_SIDE - rightPaddle.w) { // Right side
-            //ball.x = WIDTH - ball.r;
-            gameOver();
-        } else if (ball.x + ball.r/2 < LEFT_SIDE) { // Left side
-            gameOver();
-        } else if (ball.y + ball.r > HEIGHT) { // Bottom side
+        if (ball.y + ball.r > HEIGHT) { // Bottom side
             ball.vy = -ball.vy;
             ball.y = HEIGHT - ball.r;
         } else if (ball.y - ball.r < 0) { // Top side
             ball.vy = -ball.vy;
             ball.y = ball.r;
+        } else if (ball.x - ball.r/2 > RIGHT_SIDE - rightPaddle.w) { // Right side
+            gameOver();
+        } else if (ball.x + ball.r/2 < LEFT_SIDE) { // Left side
+            gameOver();
         } else if (ball.x - leftPaddle.w < leftPaddle.x && ball.y < leftPaddle.y + leftPaddle.h && ball.y > leftPaddle.y) { // Left paddle
             ball.vx = -ball.vx;
             ball.x = leftPaddle.x + leftPaddle.w;
             increaseScore();
         } else if (ball.x + ball.r > rightPaddle.x + (rightPaddle.w/2) && ball.y < rightPaddle.y + rightPaddle.h && ball.y > rightPaddle.y) { // Right paddle
-            if (ball.vx < 0) {
-                ball.vx -= 0.2;
-            }
             if (ball.vx > 0) {
                 ball.vx += 0.2;
             }
@@ -170,8 +164,13 @@ function playPong() {
         updateScore();
     }
 
+    function clearMiddleArea() {
+        ctx.clearRect(WIDTH/2-40, HEIGHT/2 - 55, 100, 80); // score middle area
+    }
+
     function increaseScore() {
         score++;
+        clearMiddleArea();
     }
 
     function updateScore() {
@@ -214,6 +213,7 @@ function playPong() {
         score = 0;
         loadingAlpha = 0.0;
         gameStarted = false;
+        clearMiddleArea();
     }
 
     animationLoop();
