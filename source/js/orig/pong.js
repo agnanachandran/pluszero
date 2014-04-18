@@ -138,10 +138,6 @@ function playPong() {
         } else if (ball.y - ball.r < 0) { // Top side
             ball.vy = -ball.vy;
             ball.y = ball.r;
-        } else if (ball.x - ball.r/2 > RIGHT_SIDE - rightPaddle.w) { // Right side
-            gameOver();
-        } else if (ball.x + ball.r/2 < LEFT_SIDE) { // Left side
-            gameOver();
         } else if (ball.x - leftPaddle.w < leftPaddle.x && ball.y < leftPaddle.y + leftPaddle.h && ball.y > leftPaddle.y) { // Left paddle
             ball.vx = -ball.vx;
             ball.x = leftPaddle.x + leftPaddle.w;
@@ -153,6 +149,10 @@ function playPong() {
             ball.vx = -ball.vx;
             ball.x = rightPaddle.x - rightPaddle.w;
             increaseScore();
+        } else if (ball.x - ball.r/2 > RIGHT_SIDE - rightPaddle.w) { // Right side
+            gameOver();
+        } else if (ball.x + ball.r/2 < LEFT_SIDE) { // Left side
+            gameOver();
         }
     }
 
