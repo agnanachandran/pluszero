@@ -17,10 +17,17 @@ function playPong() {
     }
     var WIDTH = canvas.width;
     var HEIGHT = canvas.height;
+    var highScore = 0;
+
     ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
-    // Define particles coming off paddle
-    var particles = [];
+    if (typeof(Storage) !== 'undefined') {
+        if (localStorage.getItem('highScore') !== null) {
+            highScore = localStorage.getItem('highScore');
+        } ;
+        // highScore is actually displayed later, after the first clearRect call
+    }
+
     var ball = {};
     var paddles = [];
     var mouse = {};
@@ -32,7 +39,7 @@ function playPong() {
     var BALL_ORIG_Y = 50;
     var BALL_ORIG_VX = 4;
     var BALL_ORIG_VY= 8;
-    var INNER_PADDING = 40;
+    var INNER_PADDING = 50;
 
     var score = 0;
     var gameStarted = false;
@@ -64,14 +71,16 @@ function playPong() {
     paddles.push(new Paddle('left'));
     paddles.push(new Paddle('right'));
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
+    updateHighScore(highScore);
+
     function paintCanvas() {
         ctx.beginPath();
         ctx.moveTo(INNER_PADDING, 0);
         ctx.lineTo(INNER_PADDING, HEIGHT);
         ctx.strokeStyle = "#9f1024";
         ctx.clearRect(paddles[0].x - 15, 0, paddles[0].w + 20, HEIGHT); // left paddle
-        ctx.clearRect(paddles[1].x - 10, 0, paddles[1].w + 20, HEIGHT); // right paddle
-        ctx.clearRect(ball.x-20, ball.y-20, 50, 50);
+        ctx.clearRect(paddles[1].x - 15, 0, paddles[1].w + 25, HEIGHT); // right paddle
+        ctx.clearRect(ball.x-15, ball.y-20, 50, 50);
         ctx.moveTo(WIDTH - INNER_PADDING, 0);
         ctx.lineTo(WIDTH - INNER_PADDING, HEIGHT);
         ctx.stroke();
@@ -161,7 +170,7 @@ function playPong() {
         ball.y += ball.vy;
         updatePaddles();
         checkCollisions();
-        updateScore();
+        updateScore(); // TODO: only update score area if ball is within the middle area
     }
 
     function clearMiddleArea() {
@@ -175,8 +184,9 @@ function playPong() {
 
     function updateScore() {
         ctx.fillStyle = "rgba(150, 150, 150, " + roundToThree(loadingAlpha) + ")";
-        ctx.font = "30pt Open Sans";
-        ctx.fillText(score.toString(), WIDTH/2-10, HEIGHT/2);
+        ctx.font = "300 40px Open Sans";
+        ctx.textAlign = 'center';
+        ctx.fillText(score.toString(), WIDTH/2, HEIGHT/2);
     }
 
     function updatePaddles() {
@@ -198,6 +208,17 @@ function playPong() {
         }
     }
 
+    function updateHighScore(updatedHighScore) {
+        ctx.clearRect(0, 0, 30, 30);
+        ctx.fillStyle = "rgb(150, 150, 150)";
+        ctx.font = "300 22px Open Sans";
+        if (updatedHighScore >= 100) {
+            ctx.font = "300 16px Open Sans";
+        }
+        ctx.textAlign = 'start';
+        ctx.fillText(updatedHighScore.toString(), 5, 20);
+    }
+
     function gameOver() {
         ball.x = BALL_ORIG_X;
         ball.y = Math.floor((Math.random()*(HEIGHT - 20)) + 20);
@@ -209,7 +230,13 @@ function playPong() {
         } else {
             ball.vy = BALL_ORIG_VY;
         }
-
+        if (typeof(Storage) !== 'undefined') {
+            if (score > highScore) {
+                localStorage.setItem('highScore', score);
+                highScore = score;
+                updateHighScore(highScore);
+            }
+        }
         score = 0;
         loadingAlpha = 0.0;
         gameStarted = false;

@@ -15,7 +15,8 @@ div#footer {
   margin: 0 auto;
   margin-top: 3em;
   background-color: #333333;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   text-align: center; }
   div#footer a {
     color: #e3e3e3;
