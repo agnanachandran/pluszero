@@ -115,7 +115,8 @@ nav ul {
   -khtml-transition: all 0.5s linear;
   -webkit-transition: all 0.5s linear;
   -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear; }
+  transition: all 0.5s linear;
+  display: block; }
 
 .nav-item a:hover {
   color: white; }
@@ -134,7 +135,7 @@ h2#title {
   text-align: center;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  font-weight: 600;
+  font-weight: 700;
   color: gray; }
 
 a {

@@ -115,7 +115,8 @@ nav ul {
   -khtml-transition: all 0.5s linear;
   -webkit-transition: all 0.5s linear;
   -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear; }
+  transition: all 0.5s linear;
+  display: block; }
 
 .nav-item a:hover {
   color: white; }
@@ -130,7 +131,7 @@ nav ul {
 
 body {
   background: transparent url(../images/subtle_dots.png) repeat center top;
-  min-width: 520px; }
+  min-width: 522px; }
 
 h2#plus-zero {
   font-size: 6em;
