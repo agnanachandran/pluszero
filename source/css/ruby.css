@@ -52,7 +52,7 @@ div#footer {
       text-align: center;
       margin: 0 auto; } }
   #name a.name-link-first {
-    font-weight: 700;
+    font-weight: 600;
     margin-left: 0.8em; }
     @media screen and (max-width: 767px) {
       #name a.name-link-first {
@@ -121,7 +121,7 @@ nav ul {
   color: white; }
 
 .nav-item.active a {
-  text-transform: uppercase;
+  font-weight: bold;
   color: white; }
 
 .divide {
@@ -138,7 +138,7 @@ h1 {
   text-align: left;
   text-transform: uppercase;
   color: silver;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 1em;
   margin-left: 0.5em; }
 
