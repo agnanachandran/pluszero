@@ -179,7 +179,7 @@ a:hover {
 .info-section {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  width: 50%; }
+  width: 45%; }
   @media screen and (max-width: 767px) {
     .info-section {
       float: none;
@@ -189,7 +189,7 @@ a:hover {
 .img-section {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  width: 50%; }
+  width: 45%; }
   @media screen and (max-width: 767px) {
     .img-section {
       width: 100%; } }
