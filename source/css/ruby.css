@@ -30,6 +30,9 @@ div#footer {
   div#footer a:hover {
     color: white; }
 
+#name {
+  text-align: center; }
+
 #name a {
   text-decoration: none;
   -webkit-transition: all 0.5s ease;
@@ -43,10 +46,18 @@ div#footer {
   float: left;
   text-align: left;
   color: #efefef; }
+  @media screen and (max-width: 767px) {
+    #name a {
+      float: none;
+      text-align: center;
+      margin: 0 auto; } }
 
 #name a.name-link-first {
   font-weight: 700;
   margin-left: 0.8em; }
+  @media screen and (max-width: 767px) {
+    #name a.name-link-first {
+      margin-left: 0em; } }
 
 #name a.name-link-second {
   font-weight: 300;
@@ -81,7 +92,8 @@ nav ul {
   @media screen and (max-width: 767px) {
     nav ul {
       clear: both;
-      float: none; } }
+      float: none;
+      margin-top: 0.25em; } }
 
 .nav-item {
   float: left;

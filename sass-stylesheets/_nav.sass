@@ -7,6 +7,10 @@ $nav-item-active: #fff
 $nav-item-default: #e3e3e3
 $break-small: 767px
 
+#name
+  @media screen and (max-width: $break-small)
+  text-align: center
+
 #name a
   text-decoration: none
   -webkit-transition: all 0.5s ease
@@ -19,11 +23,17 @@ $break-small: 767px
   font-size: 1.5em
   float: left
   text-align: left
+  @media screen and (max-width: $break-small)
+    float: none
+    text-align: center
+    margin: 0 auto
   color: $name-default
 
 #name a.name-link-first
   font-weight: 700
   margin-left: 0.8em
+  @media screen and (max-width: $break-small)
+    margin-left: 0em
 
 #name a.name-link-second
   font-weight: 300
@@ -57,6 +67,7 @@ nav ul
   @media screen and (max-width: $break-small)
     clear: both
     float: none
+    margin-top: 0.25em
 
 .nav-item
   float: left
