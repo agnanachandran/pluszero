@@ -1,5 +1,4 @@
 body {
-  min-width: 767px;
   margin: 0 auto;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
 
@@ -59,6 +58,10 @@ div#footer {
 #name a.name-link-second:hover {
   color: white; }
 
+hr {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0; }
+
 #nav-bar {
   background-color: #333333; }
 
@@ -71,17 +74,26 @@ nav ul {
   -webkit-margin-after: 0em;
   -webkit-padding-start: 0px;
   margin-top: 0.75em;
-  margin-bottom: 0.75em;
   float: right;
   text-align: center;
   overflow: auto;
   list-style-type: none; }
+  @media screen and (max-width: 767px) {
+    nav ul {
+      clear: both;
+      float: none; } }
 
 .nav-item {
   float: left;
   margin-right: 0px;
   border-right: 1px solid #cccccc;
   padding: 0 20px; }
+  @media screen and (max-width: 767px) {
+    .nav-item {
+      float: none;
+      border-top: 1px dotted #cccccc;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em; } }
 
 .nav-item:last-child {
   border-right: none; }
