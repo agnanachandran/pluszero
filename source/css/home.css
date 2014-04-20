@@ -103,6 +103,7 @@ nav ul {
       float: none;
       border-top: 1px dotted #cccccc;
       border-right: none;
+      font-size: 1.4em;
       padding-top: 0.5em;
       padding-bottom: 0.5em; } }
 
@@ -133,7 +134,7 @@ nav ul {
 
 body {
   background: transparent url(../images/subtle_dots.png) repeat center top;
-  min-width: 550px; }
+  min-width: 670px; }
 
 h2#plus-zero {
   font-size: 6em;
