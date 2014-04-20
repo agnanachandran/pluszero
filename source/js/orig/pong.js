@@ -78,7 +78,7 @@ function playPong() {
         ctx.moveTo(INNER_PADDING, 0);
         ctx.lineTo(INNER_PADDING, HEIGHT);
         ctx.strokeStyle = "#9f1024";
-        ctx.clearRect(paddles[0].x - 15, 0, paddles[0].w + 20, HEIGHT); // left paddle
+        ctx.clearRect(paddles[0].x - 15, 0, paddles[0].w + 25, HEIGHT); // left paddle
         ctx.clearRect(paddles[1].x - 15, 0, paddles[1].w + 25, HEIGHT); // right paddle
         ctx.clearRect(ball.x-15, ball.y-20, 50, 50);
         ctx.moveTo(WIDTH - INNER_PADDING, 0);
