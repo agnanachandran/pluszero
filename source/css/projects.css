@@ -119,9 +119,6 @@ nav ul {
   clear: both;
   padding: 0; }
 
-div {
-  display: block; }
-
 h2#title {
   font-size: 3em;
   margin: 0 auto;
@@ -154,14 +151,9 @@ a:hover {
 
 .project-info {
   max-width: 500px; }
-
-.info-section {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em; }
-
-.img-section {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em; }
+  @media screen and (max-width: 767px) {
+    .project-info {
+      margin: 0 auto; } }
 
 .push-left {
   clear: both;
@@ -169,6 +161,24 @@ a:hover {
 
 .push-right {
   float: right; }
+
+.info-section {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  width: 50%; }
+  @media screen and (max-width: 767px) {
+    .info-section {
+      float: none;
+      width: 100%;
+      text-align: center; } }
+
+.img-section {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  width: 50%; }
+  @media screen and (max-width: 767px) {
+    .img-section {
+      width: 100%; } }
 
 .project-specs-title {
   -webkit-margin-before: 0em;
@@ -184,11 +194,14 @@ a:hover {
   color: #444444; }
 
 .image {
-  width: 500px;
+  width: 100%;
   height: auto;
-  margin-right: 50px;
-  margin-left: 50px;
   display: inline-block; }
+  @media screen and (max-width: 767px) {
+    .image {
+      width: 100%;
+      margin-left: 0px;
+      margin-right: 0px; } }
 
 .std-row {
   display: inline-block;

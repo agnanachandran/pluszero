@@ -3,9 +3,7 @@
 
 $navbar-width: 1133px
 $std-gray: #444444
-
-div
-  display: block
+$break-small: 767px
 
 h2#title
   font-size: 3em
@@ -39,14 +37,8 @@ a:hover
 
 .project-info
   max-width: 500px
-
-.info-section
-  padding-top: 0.5em
-  padding-bottom: 0.5em
-
-.img-section
-  padding-top: 0.5em
-  padding-bottom: 0.5em
+  @media screen and (max-width: $break-small)
+    margin: 0 auto
 
 .push-left
   clear: both
@@ -54,6 +46,23 @@ a:hover
 
 .push-right
   float: right
+
+.info-section
+  padding-top: 0.5em
+  padding-bottom: 0.5em
+  width: 50%
+  @media screen and (max-width: $break-small)
+    float: none
+    width: 100%
+    text-align: center
+
+
+.img-section
+  padding-top: 0.5em
+  padding-bottom: 0.5em
+  width: 50%
+  @media screen and (max-width: $break-small)
+    width: 100%
 
 .project-specs-title
   -webkit-margin-before: 0em
@@ -69,11 +78,13 @@ a:hover
   color: $std-gray
 
 .image
-  width: 500px
+  width: 100%
   height: auto
-  margin-right: 50px
-  margin-left: 50px
   display: inline-block
+  @media screen and (max-width: $break-small)
+    width: 100%
+    margin-left: 0px
+    margin-right: 0px
 
 .std-row
   display: inline-block
