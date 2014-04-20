@@ -51,23 +51,19 @@ div#footer {
       float: none;
       text-align: center;
       margin: 0 auto; } }
-
-#name a.name-link-first {
-  font-weight: 700;
-  margin-left: 0.8em; }
-  @media screen and (max-width: 767px) {
-    #name a.name-link-first {
-      margin-left: 0em; } }
-
-#name a.name-link-second {
-  font-weight: 300;
-  margin-left: 0em; }
-
-#name a.name-link-first:hover {
-  color: white; }
-
-#name a.name-link-second:hover {
-  color: white; }
+  #name a.name-link-first {
+    font-weight: 700;
+    margin-left: 0.8em; }
+    @media screen and (max-width: 767px) {
+      #name a.name-link-first {
+        margin-left: 0em; } }
+  #name a.name-link-second {
+    font-weight: 300;
+    margin-left: 0em; }
+  #name a.name-link-first:hover {
+    color: white; }
+  #name a.name-link-second:hover {
+    color: white; }
 
 hr {
   -webkit-margin-before: 0;
@@ -104,6 +100,7 @@ nav ul {
     .nav-item {
       float: none;
       border-top: 1px dotted #cccccc;
+      border-right: none;
       padding-top: 0.5em;
       padding-bottom: 0.5em; } }
 
