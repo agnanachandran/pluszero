@@ -94,8 +94,10 @@ nav ul {
 .nav-item {
   float: left;
   margin-right: 0px;
-  border-right: 1px solid #cccccc;
-  padding: 0 20px; }
+  border-right: 1px dotted #cccccc;
+  padding: 0 20px;
+  padding-bottom: 2px;
+  font-size: 1.1em; }
   @media screen and (max-width: 767px) {
     .nav-item {
       float: none;
@@ -131,7 +133,7 @@ nav ul {
 
 body {
   background: transparent url(../images/subtle_dots.png) repeat center top;
-  min-width: 522px; }
+  min-width: 550px; }
 
 h2#plus-zero {
   font-size: 6em;
@@ -162,6 +164,8 @@ canvas {
   opacity: 0; }
 
 #play-pong {
+  text-decoration: none;
+  cursor: pointer;
   color: #428bca;
   -o-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
