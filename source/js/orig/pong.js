@@ -48,8 +48,8 @@ function playPong() {
         x: BALL_ORIG_X,
         y: BALL_ORIG_Y,
         r: 6,
-        vx: 4,
-        vy: 8,
+        vx: BALL_ORIG_VX,
+        vy: BALL_ORIG_VY,
 
         draw: function(loadingAlpha) {
             ctx.beginPath(); // Draw ball
@@ -80,7 +80,7 @@ function playPong() {
         ctx.strokeStyle = "#9f1024";
         ctx.clearRect(paddles[0].x - 15, 0, paddles[0].w + 25, HEIGHT); // left paddle
         ctx.clearRect(paddles[1].x - 15, 0, paddles[1].w + 25, HEIGHT); // right paddle
-        ctx.clearRect(ball.x-15, ball.y-20, 50, 50);
+        ctx.clearRect(ball.x-35, ball.y-30, 50, 50);
         ctx.moveTo(WIDTH - INNER_PADDING, 0);
         ctx.lineTo(WIDTH - INNER_PADDING, HEIGHT);
         ctx.stroke();
@@ -152,7 +152,7 @@ function playPong() {
             ball.x = leftPaddle.x + leftPaddle.w;
             increaseScore();
         } else if (ball.x + ball.r > rightPaddle.x + (rightPaddle.w/2) && ball.y < rightPaddle.y + rightPaddle.h && ball.y > rightPaddle.y) { // Right paddle
-            if (ball.vx > 0) {
+            if (ball.vx > 0 && ball.vx <= 8) {
                 ball.vx += 0.2;
             }
             ball.vx = -ball.vx;
@@ -170,7 +170,7 @@ function playPong() {
         ball.y += ball.vy;
         updatePaddles();
         checkCollisions();
-        updateScore(); // TODO: only update score area if ball is within the middle area
+        updateScore();
     }
 
     function clearMiddleArea() {
