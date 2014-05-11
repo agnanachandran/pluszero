@@ -40,7 +40,7 @@
                             </p>
                             <h5 class="project-specs-title">TECH STUFF</h5>
                             <p class="project-specs-info">
-                                Ruby on Rails, PostgreSQL, ERB, SCSS, CoffeeScript
+                                Ruby on Rails, PostgreSQL, erb, SCSS, CoffeeScript
                             </p>
                         </div>
                         <div class="img-section push-right">
@@ -52,10 +52,10 @@
                 <div class="std-row">
                     <div class="divider"></div>
                     <div class="project-container">
-                        <div class="img-section push-left">
+                        <div class="img-section push-left" id="img-emotive">
                             <img class="image" src="images/emotive_framed.png">
                         </div>
-                        <div class="info-section push-right">
+                        <div class="info-section push-right" id="info-emotive">
                             <h3 class="project-title"><a href="https://github.com/agnanachandran/emotive">emotive</a></h3>
                             <p class="project-info">emotive is an Android app designed to let you do the things you do most, faster. Spend less time fiddling with different apps and spend more time doing. <br><br> Start listening to the music you like faster than ever. Search YouTube without all the junk on the sides you don't care about.<br><br><br>Sound good? <a class="link" href="http://www.google.ca">Get emotive.</a>
                             </p>
@@ -90,10 +90,10 @@
                 <div class="std-row">
                     <div class="divider"></div>
                     <div class="project-container">
-                        <div class="img-section push-left">
+                        <div class="img-section push-left" id="img-simon">
                             <img class="image" src="images/simon_framed.png">
                         </div>
-                        <div class="info-section push-right">
+                        <div class="info-section push-right" id="info-simon">
                             <h3 class="project-title"><a href="https://github.com/agnanachandran/simon-corona">Simon Lite</a></h3>
                             <p class="project-info">Simon Lite is an Android game created using the Corona SDK. Repeat the pattern of flashing lights to attain a higher score. <br><br> With multiple difficulty modes, and a minimalistic user interface, Simon Lite is a ton of fun. <br><br><br><a class="link" href="https://play.google.com/store/apps/details?id=ca.pluszero.games.simonlite">Get Simon Lite.</a>
                             </p>
@@ -127,10 +127,10 @@
                 <div class="std-row">
                     <div class="divider"></div>
                     <div class="project-container">
-                        <div class="img-section push-left">
+                        <div class="img-section push-left" id="img-linalg-matrices">
                             <img class="image" src="images/matrix.png">
                         </div>
-                        <div class="info-section push-right">
+                        <div class="info-section push-right" id="info-linalg-matrices">
                             <h3 class="project-title"><a href="http://github.com/agnanachandran/linalg-matrices/">Linear Algebra<br>Matrix Solver</a></h3>
                             <p class="project-info">A Java Swing application that calculates a number of matrix operations. It's a fantastic learning tool for those who prefer GUIs to the likes of Mathematica, Maple, MATLAB, etc., and those who are just learning about matrices. <br><br><br><a class="link" href="http://github.com/agnanachandran/linalg-matrices/">Build the project with an IDE such as Eclipse.</a>
                             </p>
@@ -188,6 +188,29 @@
             <script type="text/javascript">
                 if (typeof jQuery == 'undefined') {
                     document.write(unescape("%3Cscript src='../js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+                }
+            </script>
+            <script type="text/javascript" charset="utf-8">
+                // media query event handler
+                var mq = window.matchMedia("(max-width: 767px)"); // Should match media query in SASS files
+                mq.addListener(widthChange);
+                widthChange(mq);
+
+                // media query change for having info followed by images for each project
+                function widthChange(mq) {
+                    var switchElementNames = ['emotive', 'simon', 'linalg-matrices']; // Make sure to add more to this list when more projects are added (only necessary for the ones that are in the 'wrong' order
+                    if (mq.matches) {
+                        for (var idx = 0; idx < switchElementNames.length; idx++) {
+                            var idSuffix = switchElementNames[idx];
+                            $("#img-" + idSuffix).before($("#info-" + idSuffix));
+                        }
+                    }
+                    else {
+                        for (var idx = 0; idx < switchElementNames.length; idx++) {
+                            var idSuffix = switchElementNames[idx];
+                            $("#img-" + idSuffix).after($("#info-" + idSuffix));
+                        }
+                    }
                 }
             </script>
             <script type="text/javascript">
