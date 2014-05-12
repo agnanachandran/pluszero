@@ -1,26 +1,17 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700|Roboto:100,300|Source+Sans+Pro:700' rel='stylesheet' type='text/css'>
-    <link href='css/res.css' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700|Roboto:100,300,400,700|Source+Sans+Pro:200,400,600' rel='stylesheet' type='text/css'>
+    <link href='css/styles.css' rel='stylesheet' type='text/css'>
     <title>Resume</title>
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-37973526-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-    </script>
   </head>
   <body>
     <div id='resume-container'>
       <div class='header'>
-        <h1 id='name'>Anojh Gnanachandran</h1>
+        <h1 id='name'>
+          Anojh
+          <span id='last-name'>Gnanachandran</span>
+        </h1>
         <div class='info-container'>
           <div class='site'>
             <a href='http://www.pluszero.ca'>pluszero.ca</a>
@@ -37,22 +28,18 @@
         <section>
           <div class='section-header'>Technical Skills</div>
           <div class='section-content' id='technical-skills'>
-            <ul>
+            <ul id='skills-container'>
               <li class='skills'>
                 <span class='skill'>Languages:</span>
-                <p>Java, Python, C, C#, C++, Objective-C++, SQL</p>
+                <p>Java, Python, Ruby, Objective-C, C#, C++, SQL</p>
               </li>
               <li class='skills'>
                 <span class='skill'>Web Development:</span>
-                <p>HTML (Haml), CSS (SASS), JavaScript (jQuery)</p>
+                <p>HTML (Haml, erb), CSS (SASS, LESS), JavaScript (CoffeeScript)</p>
               </li>
               <li class='skills'>
                 <span class='skill'>Tools and Software:</span>
-                <p>vim, Eclipse, Visual Studio, XCode, Git, SVN</p>
-              </li>
-              <li class='skills'>
-                <span class='skill'>Operating Systems:</span>
-                <p>Mac OS X, Linux (Ubuntu), Windows</p>
+                <p>vim, XCode, Android Studio, Eclipse, Visual Studio</p>
               </li>
             </ul>
           </div>
@@ -62,15 +49,27 @@
           <div class='section-content' id='employment'>
             <div class='employment'>
               <div class='employment-info left'>
-                <div class='title'>May - August 2013: BigRoad Inc</div>
-                <div class='occupation'>Software Developer</div>
-                <div class='languages'>Android, Java, PostgreSQL, JSP, SCSS, SVN, iOS, Objective-C++</div>
+                <div class='title'>Pivotal Labs (January - April 2014)</div>
+                <div class='occupation'>Agile Engineer</div>
+                <div class='languages'>iOS, Android, Java, JavaScript</div>
               </div>
               <div class='info right'>
                 <ul class='list'>
-                  <li>Implemented various features and bug fixes to company's flagship <b>Android</b> app including an intelligent incremental search for the app's contact picker</li>
-                  <li>Developed various front-end improvements to company's corporate website using <b>Zurb Foundation</b>, and <b>RenderSnake</b>, a <b>Java</b> library used to render <b>HTML</b> components that were used in tandem with <b>JSP</b></li>
-                  <li>Collaborated in a continuous integration, code reviewed environment with extensive communication</li>
+                  <li>Collaborated in a pair-programming, agile, test-driven-development (Jasmine.js, Robolectric) environment</li>
+                  <li>Built out various features and bug fixes for Android and iOS 7 apps, such as dynamic form creation and validation</li>
+                </ul>
+              </div>
+            </div>
+            <div class='employment'>
+              <div class='employment-info left'>
+                <div class='title'>BigRoad (May - August 2013)</div>
+                <div class='occupation'>Software Developer</div>
+                <div class='languages'>Android, Java, PostgreSQL, <br> JSP, SCSS, iOS</div>
+              </div>
+              <div class='info right'>
+                <ul class='list'>
+                  <li>Implemented various features and bug fixes for Android app including efficient incremental search of user's contacts</li>
+                  <li>Developed front-end improvements to corporate website using Zurb Foundation</li>
                 </ul>
               </div>
             </div>
@@ -81,47 +80,47 @@
           <div class='section-content' id='projects'>
             <div class='project'>
               <div class='project-info left'>
-                <div class='title'>GradeTrackr Android App</div>
-                <div class='languages'>Android, Java, SQLite, XML</div>
+                <div class='title'>graphr (Angular & D3)</div>
+                <div class='languages'>MongoDB, ExpressJS, AngularJS, Node.js, <br> D3.js, HTML, SASS</div>
               </div>
               <div class='info right'>
                 <ul class='list'>
-                  <li>Published an <b>Android</b> app to the Play Store designed to make students' lives easier by managing their grades, schedule, and tasks</li>
-                  <li>Collaborated in a group of 4 and used Git(Hub) for version control</li>
+                  <li>Built an app to better visualize graph algorithms (BFS, DFS, Dijkstra's, A*, etc.) through an interactive graph builder and solver</li>
                 </ul>
               </div>
             </div>
             <div class='project'>
               <div class='project-info left'>
-                <div class='title'>Simon Memory Game for Android and iOS</div>
-                <div class='languages'>Lua, Corona SDK</div>
+                <div class='title'>emotive (Android)</div>
+                <div class='languages'>Android (Java), XML, SQLite</div>
               </div>
               <div class='info right'>
                 <ul class='list'>
-                  <li>The classic memory game Simon with multiple difficulty levels and a clean, minimalistic design</li>
-                  <li>Released on the <b>Android</b> Play Store and pending release on the <b>iOS</b> App Store</li>
+                  <li>Developed an Android app to facilitate faster multi-tasking through a rapid, intelligent UI and integration of various APIs</li>
+                  <li>Incorporates a resizable app widget, incremental search, and a well-thought-out UX</li>
                 </ul>
               </div>
             </div>
             <div class='project'>
               <div class='project-info left'>
-                <div class='title'>Java and Windows 8 Matrix Solver</div>
-                <div class='languages'>Java, Swing API, C#, XAML</div>
+                <div class='title'>SVBLET (Ruby on Rails)</div>
+                <div class='languages'>Ruby on Rails, erb, SCSS, CoffeeScript</div>
               </div>
               <div class='info right'>
                 <ul class='list'>
-                  <li>A <b>Swing</b> application ported to Windows 8 that uses linear algebra concepts and performs matrix operations</li>
+                  <li>Created a <i>better</i> way to find and rent houses</li>
+                  <li>Implemented multi-file upload with drag-and-drop, front-end design, and various other features</li>
                 </ul>
               </div>
             </div>
             <div class='project'>
               <div class='project-info left'>
-                <div class='title'>Personal Website and Blog (pluszero.ca)</div>
-                <div class='languages'>HTML (Haml), CSS (SASS), JavaScript (jQuery), Bootstrap, Octopress, Markdown</div>
+                <div class='title'>GradeTrackr (Android)</div>
+                <div class='languages'>Android (Java), XML, SQLite</div>
               </div>
               <div class='info right'>
                 <ul class='list'>
-                  <li>A personal website where I also host some miscellenaeous projects such as a "Hipster Band Name Generator" I made at a hackathon using <b>Bootstrap</b> and <b>jQuery</b>, a personal blog, as well as my r&#233;sum&#233;, written in <b>Haml</b> and <b>SASS</b></li>
+                  <li>Worked in a group of 4 and created an app designed to make students' lives easier by managing their grades, schedule, and tasks for them</li>
                 </ul>
               </div>
             </div>
@@ -135,27 +134,14 @@
                 <div class='title'>University of Waterloo</div>
                 <div class='location'>Waterloo, ON</div>
                 <div class='subtitle'>Honours Software Engineering (Co-op)</div>
-                <div class='duration'>2012 - Present</div>
+                <div class='duration'>September 2012 - Present</div>
               </div>
               <div class='info right'>
                 <ul class='list'>
                   <li>Engineering Ambassador (January 2013 - Present)</li>
-                  <li>Class Academic Representative (September 2012 - Present)</li>
+                  <li>Academic Representative (September 2012 - Present)</li>
                   <li>Dean's Honours List (September 2012 - Present)</li>
                   <li>President's Scholarship of Distinction (June 2012)</li>
-                </ul>
-              </div>
-            </div>
-            <div class='education'>
-              <div class='education-info left'>
-                <div class='title'>Mississauga Secondary School</div>
-                <div class='location'>Mississauga, ON</div>
-                <div class='duration'>2009 - 2012</div>
-              </div>
-              <div class='info right'>
-                <ul class='list'>
-                  <li>Governor General's Award (June 2012)</li>
-                  <li>Euclid Mathematics Contest School Medal (June 2012)</li>
                 </ul>
               </div>
             </div>

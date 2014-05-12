@@ -1,12 +1,9 @@
+@charset "UTF-8";
 /* styles.sass */
 /* Variables */
 body {
   font-family: Roboto, Arial, sans-serif;
   font-weight: 300; }
-
-b {
-  font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 700; }
 
 p {
   display: inline; }
@@ -26,33 +23,45 @@ section {
 .header {
   overflow: auto; }
 
+#skills-container {
+  margin-bottom: 0.7em;
+  -webkit-padding-start: 20px; }
+
 .skill {
-  font-family: "Open Sans", Arial, sans-serif;
-  font-weight: bold;
-  font-size: 1.08em; }
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.1em; }
 
 li.skills p {
   font-size: 1.05em; }
 
-#resume-container {
-  margin: 0 auto;
-  width: 900px; }
+li.skills {
+  margin-bottom: 0.2em; }
 
 #name {
   font-family: "Source Sans Pro", Arial, sans-serif;
   font-size: 3.5em;
-  margin-top: 0.32em;
+  font-weight: 400;
+  margin-top: 0.3em;
+  margin-bottom: 0.2em;
   margin-left: 0.2em;
-  margin-bottom: 0.3em;
   color: #444444;
   float: left; }
+
+#last-name {
+  font-weight: 200; }
+
+#resume-container {
+  margin: 0 auto;
+  margin-bottom: 2em;
+  width: 900px; }
 
 .info-container {
   float: right;
   text-align: right;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
   font-weight: 100;
-  font-size: 1.2em;
+  font-size: 1.25em;
   margin-top: 0em; }
 
 .main-content {
@@ -61,42 +70,50 @@ li.skills p {
 .section-header {
   background-color: #444444;
   color: white;
-  /* Huh? below */
-  padding: 0.01em 0em 0.02em 0.3em;
-  margin-bottom: 0.3em;
+  padding: 0.1em 0em 0.15em 0.3em;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  margin-top: 0em;
+  margin-bottom: 0.4em;
   font-family: "Source Sans Pro";
-  font-weight: bold;
+  font-weight: 400;
   font-size: 26px; }
 
 .section-content {
   margin-left: 0.5em;
-  margin-bottom: 0.9em;
-  overflow: auto;
-  width: 100%; }
+  margin-bottom: 0em;
+  overflow: auto; }
 
 .title {
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 700;
-  margin-bottom: 0em; }
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 1.25em;
+  font-weight: 400; }
+
+.occupation {
+  font-size: 1.25em;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 400;
+  margin-bottom: 0.1em; }
 
 .languages {
   font-family: Roboto, Arial, sans-serif;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 1em; }
-
-.occupation {
   font-size: 1.1em;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 700;
-  margin-bottom: 0.1em; }
+  font-weight: 300; }
 
 .list {
-  list-style-type: none; }
+  list-style-type: none;
+  font-size: 1.1em; }
+
+.location {
+  font-size: 1.25em;
+  font-weight: 400; }
+
+.subtitle {
+  font-size: 1.1em; }
 
 .duration {
-  font-style: italic; }
+  font-size: 1.1em; }
 
 .left {
   float: left;
@@ -114,14 +131,15 @@ ul.list {
 
 ul.list li {
   line-height: 145%;
-  margin-bottom: 0.1em; }
+  margin-bottom: 0.2em; }
 
 ul.list li:before {
   display: inline-block;
-  content: "-";
+  content: "•";
   width: 2em;
   margin-left: -2em; }
 
 .project, .employment, .education {
   overflow: auto;
-  margin-bottom: 0.6em; }
+  margin-bottom: 0.8em;
+  margin-top: 0.15em; }
