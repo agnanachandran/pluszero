@@ -170,7 +170,6 @@ a:hover {
       margin: 0 auto; } }
 
 .push-left {
-  clear: both;
   float: left; }
 
 .push-right {
