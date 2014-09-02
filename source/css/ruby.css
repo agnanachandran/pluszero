@@ -5,6 +5,11 @@ body {
 a {
   text-decoration: none; }
 
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: white; }
+
 p, li {
   font-weight: 300; }
 

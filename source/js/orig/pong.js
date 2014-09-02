@@ -53,7 +53,7 @@ function playPong() {
 
         draw: function(loadingAlpha) {
             ctx.beginPath(); // Draw ball
-            var rgba = "rgba(0, 0, 0, " + roundToThree(loadingAlpha) + ")";
+            var rgba = "rgba(250, 250, 250, " + roundToThree(loadingAlpha) + ")";
             ctx.fillStyle = rgba;
             ctx.arc(this.x, this.y, this.r, 0, Math.PI*2, false); // last 3 parameters are start angle, finish angle, and false so arc draws clockwise.
             ctx.fill();
@@ -63,7 +63,7 @@ function playPong() {
     function Paddle(pos) {
         this.h = 100;
         this.w = 5;
-        this.color = "#444";
+        this.color = "#eee";
         this.x = (pos === 'left') ? INNER_PADDING : WIDTH - INNER_PADDING - this.w;
         this.y = HEIGHT/2 - this.h/2; // Draw at vertical middle
     }
@@ -77,7 +77,7 @@ function playPong() {
         ctx.beginPath();
         ctx.moveTo(INNER_PADDING, 0);
         ctx.lineTo(INNER_PADDING, HEIGHT);
-        ctx.strokeStyle = "#9f1024";
+        ctx.strokeStyle = "#fefefe";
         ctx.clearRect(paddles[0].x - 15, 0, paddles[0].w + 25, HEIGHT); // left paddle
         ctx.clearRect(paddles[1].x - 15, 0, paddles[1].w + 25, HEIGHT); // right paddle
         ctx.clearRect(ball.x-15, ball.y-20, 50, 50);
@@ -102,7 +102,7 @@ function playPong() {
     function drawPaddles() {
         for (var i = 0, len = paddles.length; i < len; i++) {
             var p = paddles[i];
-            ctx.fillStyle = "rgba(0, 0, 0, " + 1 + ")";
+            ctx.fillStyle = "rgba(255, 255, 255, 1)";
             ctx.fillRect(p.x, p.y, p.w, p.h);
         }
     }
@@ -183,7 +183,7 @@ function playPong() {
     }
 
     function updateScore() {
-        ctx.fillStyle = "rgba(150, 150, 150, " + roundToThree(loadingAlpha) + ")";
+        ctx.fillStyle = "rgba(253, 253, 253, " + roundToThree(loadingAlpha) + ")";
         ctx.font = "300 40px Open Sans";
         ctx.textAlign = 'center';
         ctx.fillText(score.toString(), WIDTH/2, HEIGHT/2);
@@ -210,7 +210,7 @@ function playPong() {
 
     function updateHighScore(updatedHighScore) {
         ctx.clearRect(0, 0, 30, 30);
-        ctx.fillStyle = "rgb(150, 150, 150)";
+        ctx.fillStyle = "rgb(250, 250, 250)";
         ctx.font = "300 22px Open Sans";
         if (updatedHighScore >= 100) {
             ctx.font = "300 16px Open Sans";

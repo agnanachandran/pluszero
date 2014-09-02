@@ -5,6 +5,11 @@ body {
 a {
   text-decoration: none; }
 
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: white; }
+
 p, li {
   font-weight: 300; }
 
@@ -70,7 +75,7 @@ hr {
   -webkit-margin-after: 0; }
 
 #nav-bar {
-  background-color: #333333; }
+  background-color: rgba(40, 40, 40, 0.5); }
 
 nav {
   max-width: 1133px;
@@ -80,7 +85,8 @@ nav ul {
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
   -webkit-padding-start: 0px;
-  margin-top: 0.75em;
+  margin-top: 0.7em;
+  margin-bottom: 0.7em;
   float: right;
   text-align: center;
   overflow: auto;
@@ -96,7 +102,7 @@ nav ul {
   margin-right: 0px;
   border-right: 1px dotted #cccccc;
   padding: 0 20px;
-  padding-bottom: 2px;
+  padding-bottom: 3px;
   font-size: 1.1em; }
   @media screen and (max-width: 767px) {
     .nav-item {
@@ -130,29 +136,34 @@ nav ul {
 
 .divide {
   clear: both;
-  padding: 0; }
+  padding: 0;
+  border-color: rgba(150, 150, 150, 0.2); }
 
 body {
-  background: transparent url(../images/subtle_dots.png) repeat center top;
+  background: transparent url(../images/black-wings.jpg) repeat center top;
   min-width: 670px; }
 
-h2#plus-zero {
-  font-size: 6em;
-  font-weight: 700;
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 20px; }
+.main-content {
+  margin-bottom: 20px;
+  text-align: center; }
+
+h2#shimmer-name {
+  margin-top: 350px;
+  margin-bottom: -15px;
+  font-size: 2em;
+  font-weight: 300;
+  text-align: center; }
   @media screen and (max-width: 767px) {
-    h2#plus-zero {
-      font-size: 5em; } }
+    h2#shimmer-name {
+      font-size: 1.5em; } }
 
-#plus-zero {
-  text-shadow: black 0.1em 0.1em 0.1em; }
-
-.main-page-text {
-  color: #333333;
+#sub-title-text {
+  color: #fcfcfc;
   text-align: center;
-  font-size: 150%; }
+  margin-top: 0px;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  font-size: 120%; }
 
 canvas {
   border: 1px solid #999999;
@@ -160,6 +171,7 @@ canvas {
   padding-right: 0;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2em;
   margin-bottom: 5em;
   display: block;
   opacity: 0; }
@@ -167,14 +179,56 @@ canvas {
 #play-pong {
   text-decoration: none;
   cursor: pointer;
-  color: #428bca;
-  -o-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -khtml-transition: all 0.5s linear;
-  -webkit-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear; }
+  color: white; }
 
 #play-pong:hover {
-  color: #2a6496;
+  color: #eeeeee;
   text-decoration: underline; }
+
+.shimmer {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 3em;
+  margin-left: 140px;
+  text-align: center;
+  padding: 0 140px 0 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  background: -webkit-gradient(linear, left top, right top, from(#222222), to(#222222), color-stop(0.5, white));
+  background: -moz-gradient(linear, left top, right top, from(#222222), to(#222222), color-stop(0.5, white));
+  background: gradient(linear, left top, right top, from(#222222), to(#222222), color-stop(0.5, white));
+  -webkit-background-size: 125px 100%;
+  -ms-background-size: 125px 100%;
+  -moz-background-size: 125px 100%;
+  -o-background-size: 125px 100%;
+  background-size: 125px 100%;
+  -webkit-background-clip: text;
+  -ms-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer;
+  -ms-animation-name: shimmer;
+  -moz-animation-name: shimmer;
+  -o-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #222222; }
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: top left; }
+
+  100% {
+    background-position: top right; } }

@@ -20,14 +20,20 @@ $(document).ready(function() {
     }
 
     var clicked = false;
+
+    $('#nav-bar').animate({'opacity': '1'}, '900');
+
     $('#play-pong').click(function() {
         if (!clicked) {
-            $('#pong').animate({'opacity': '1'}, 'slow');
+            var $pongCanvas = $('#pong');
+            $pongCanvas.animate({'opacity': '1'}, 'slow');
             document.getElementById('pong').addEventListener("touchmove", touchHandler, true);
             document.getElementById('pong').addEventListener("touchcancel", touchHandler, true);    
 
-            if (!!window.HTMLCanvasElement) {
+            if (!!window.HTMLCanvasElement) { // if we're ready to go
                 playPong();
+                $pongCanvas.animate({'opacity': '1'}, 'slow');
+                $pongCanvas.css('background', 'rgba(255,255,255,0.05)');
             }
             clicked = true;
         } else {

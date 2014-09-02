@@ -2,25 +2,29 @@
 @import 'nav'
 
 body
-  background: transparent url(../images/subtle_dots.png) repeat center top
+  background: transparent url(../images/black-wings.jpg) repeat center top
   min-width: 670px // for canvas width
 
-h2#plus-zero
-  font-size: 6em
-  font-weight: 700
-  text-align: center
-  margin-top: 100px
+.main-content
   margin-bottom: 20px
-  @media screen and (max-width: $break-small)
-    font-size: 5em
-
-#plus-zero
-  text-shadow: black 0.1em 0.1em 0.1em
-
-.main-page-text
-  color: #333
   text-align: center
-  font-size: 150%
+
+h2#shimmer-name
+  margin-top: 350px
+  margin-bottom: -15px
+  font-size: 2em
+  font-weight: 300
+  text-align: center
+  @media screen and (max-width: $break-small)
+    font-size: 1.5em
+
+#sub-title-text
+  color: #fcfcfc
+  text-align: center
+  margin-top: 0px
+  -webkit-margin-before: 0px
+  -webkit-margin-after: 0px
+  font-size: 120%
 
 canvas
   border: 1px solid #999
@@ -28,6 +32,7 @@ canvas
   padding-right: 0
   margin-left: auto
   margin-right: auto
+  margin-top: 2em
   margin-bottom: 5em
   display: block
   opacity: 0
@@ -35,14 +40,49 @@ canvas
 #play-pong
   text-decoration: none
   cursor: pointer
-  color: $link-blue
-  -o-transition: all 0.5s linear
-  -moz-transition: all 0.5s linear
-  -khtml-transition: all 0.5s linear
-  -webkit-transition: all 0.5s linear
-  -ms-transition: all 0.5s linear
-  transition: all 0.5s linear
+  color: $link
 
 #play-pong:hover
-  color: $link-blue-hover
+  color: $link-hover
   text-decoration: underline
+
+// Shimmer effect
+
+= vendor($prop, $args)
+  -webkit-#{$prop}: #{$args}
+  -ms-#{$prop}: #{$args}
+  -moz-#{$prop}: #{$args}
+  -o-#{$prop}: #{$args}
+  #{$prop}: #{$args}
+
+// Source: http://codepen.io/redouglas/pen/gobsm
+.shimmer
+  font-family: "Open Sans"
+  font-weight: 300
+  font-size: 3em
+  margin-left: 140px
+  text-align: center
+  padding: 0 140px 0 0 // Necessary for iteration delay :(
+  text-align: center
+  color: rgba(255, 255, 255, 0.8)
+
+  background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff))
+  background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff))
+  background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff))
+  +vendor(background-size, 125px 100%)
+  +vendor(background-clip, text)
+  +vendor(animation-name, shimmer)
+  +vendor(animation-duration, 3s)
+  +vendor(animation-iteration-count, infinite)
+  background-repeat: no-repeat
+  background-position: 0 0
+  background-color: #222
+
+@-webkit-keyframes shimmer
+  0%
+    background-position: top left
+
+  100%
+    background-position: top right
+
+

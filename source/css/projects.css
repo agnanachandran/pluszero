@@ -5,6 +5,11 @@ body {
 a {
   text-decoration: none; }
 
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: white; }
+
 p, li {
   font-weight: 300; }
 
@@ -70,7 +75,7 @@ hr {
   -webkit-margin-after: 0; }
 
 #nav-bar {
-  background-color: #333333; }
+  background-color: rgba(40, 40, 40, 0.5); }
 
 nav {
   max-width: 1133px;
@@ -80,7 +85,8 @@ nav ul {
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
   -webkit-padding-start: 0px;
-  margin-top: 0.75em;
+  margin-top: 0.7em;
+  margin-bottom: 0.7em;
   float: right;
   text-align: center;
   overflow: auto;
@@ -96,7 +102,7 @@ nav ul {
   margin-right: 0px;
   border-right: 1px dotted #cccccc;
   padding: 0 20px;
-  padding-bottom: 2px;
+  padding-bottom: 3px;
   font-size: 1.1em; }
   @media screen and (max-width: 767px) {
     .nav-item {
@@ -130,7 +136,8 @@ nav ul {
 
 .divide {
   clear: both;
-  padding: 0; }
+  padding: 0;
+  border-color: rgba(150, 150, 150, 0.2); }
 
 h2#title {
   font-size: 3em;
@@ -142,7 +149,7 @@ h2#title {
   color: gray; }
 
 a {
-  color: #428bca;
+  color: white;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -150,7 +157,7 @@ a {
   transition: all 0.5s ease; }
 
 a:hover {
-  color: #2a6496; }
+  color: #eeeeee; }
 
 .link:hover {
   text-decoration: underline; }

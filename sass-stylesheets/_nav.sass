@@ -1,6 +1,6 @@
 $name-default: #efefef
 $name-hover: #fff
-$nav-bar-color: #333333
+$nav-bar-color: rgba(40,40,40,0.5)
 $nav-item-divider: #ccc
 $nav-item-hover: #fff
 $nav-item-active: #fff
@@ -60,7 +60,8 @@ nav ul
   -webkit-margin-before: 0em
   -webkit-margin-after: 0em
   -webkit-padding-start: 0px
-  margin-top: 0.75em
+  margin-top: 0.70em
+  margin-bottom: 0.70em
   float: right
   text-align: center
   overflow: auto
@@ -75,7 +76,7 @@ nav ul
   margin-right: 0px
   border-right: 1px dotted $nav-item-divider
   padding: 0 20px
-  padding-bottom: 2px
+  padding-bottom: 3px
   font-size: 1.1em
   @media screen and (max-width: $break-small)
     float: none
@@ -109,7 +110,4 @@ nav ul
 .divide
   clear: both
   padding: 0
-  //background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0))
-  //background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0))
-  //background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0))
-  //background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0))
+  border-color: rgba(150,150,150,0.2)
