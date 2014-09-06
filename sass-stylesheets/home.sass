@@ -2,7 +2,6 @@
 @import 'nav'
 
 body
-  background: transparent url(../images/black-wings.jpg) repeat center top
   min-width: 670px // for canvas width
 
 .main-content
@@ -33,21 +32,18 @@ canvas
   margin-left: auto
   margin-right: auto
   margin-top: 2em
-  margin-bottom: 5em
+  margin-bottom: 2em
   display: block
   opacity: 0
 
 #play-pong
   text-decoration: none
   cursor: pointer
-  color: $link
 
 #play-pong:hover
-  color: $link-hover
   text-decoration: underline
 
 // Shimmer effect
-
 = vendor($prop, $args)
   -webkit-#{$prop}: #{$args}
   -ms-#{$prop}: #{$args}
@@ -58,13 +54,10 @@ canvas
 // Source: http://codepen.io/redouglas/pen/gobsm
 .shimmer
   font-family: "Open Sans"
-  font-weight: 300
-  font-size: 3em
   margin-left: 140px
-  text-align: center
   padding: 0 140px 0 0 // Necessary for iteration delay :(
   text-align: center
-  color: rgba(255, 255, 255, 0.8)
+  color: rgba(255, 255, 255, 0.85)
 
   background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff))
   background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff))
@@ -84,5 +77,3 @@ canvas
 
   100%
     background-position: top right
-
-

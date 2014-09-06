@@ -8,12 +8,12 @@
         <link rel="stylesheet" type="text/css" href="../css/projects.css"/>
         <link rel="icon" href="../favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
 
     </head>
     <body>
         <section id="nav-bar">
-            <nav>
+            <nav id="nav">
                 <div id="name">
                     <a href="../" class="name-link-first">Anojh</a><a href="../" class="name-link-second">&nbsp;Gnanachandran</a></div>
                 <ul>
@@ -36,7 +36,7 @@
                         <div class="info-section push-left">
                             <h3 class="project-title"><a href="https://github.com/agnanachandran/graphr">graphr</a></h3>
                             <p class="project-info">graphr is a webapp that allows for better visualization of combinatorial graphs. It's a great way to quickly create graphs so you can get a better idea of how they are structured.
-                                <br><br><br>Using the MEAN stack and D3.js, graphr is powered by some fantastic technologies.<br><br>graphr is available for your enjoyment <a href="http://graphr.herokuapp.com">here.</a>
+                                <br><br><br>Using the MEAN stack and D3.js, graphr is powered by some fantastic technologies.<br><br>graphr is available for your enjoyment <a class="link" href="http://graphr.herokuapp.com">here.</a>
                             </p>
                             <h5 class="project-specs-title">TECH STUFF</h5>
                             <p class="project-specs-info">
@@ -44,7 +44,7 @@
                             </p>
                         </div>
                         <div class="img-section push-right">
-                            <img class="image" src="images/graphr.png">
+                            <img class="image shadow-image" src="images/graphr.png">
                         </div>
                     </div>
                 </div>
@@ -53,13 +53,13 @@
                     <div class="divider"></div>
                     <div class="project-container">
                         <div class="img-section push-left" id="img-svblet">
-                            <img class="image" src="images/svblet.png">
+                            <img class="image shadow-image" src="images/svblet.png">
                         </div>
                         <div class="info-section push-right" id="info-svblet">
                             <h3 class="project-title"><a href="https://github.com/svblet/svblet">SVBLET</a></h3>
                             <p class="project-info">SVBLET is a sleek solution for finding your next home. It seeks to find a balance between the wealth of options Kijiji provides and the elegant user interface of Airbnb.
                                 <br><br><br>SVBLET is a joint effort between myself and <a class="link" href="http://www.kevinpan.ca">@KevinPan.</a>
-                                <br><br><a href="http://svblet.herokuapp.com">Check out SVBLET</a>
+                                <br><br><a class="link" href="http://svblet.herokuapp.com">Check out SVBLET</a>
                             </p>
                             <h5 class="project-specs-title">TECH STUFF</h5>
                             <p class="project-specs-info">
@@ -130,7 +130,7 @@
                     <div class="divider"></div>
                     <div class="project-container">
                         <div class="img-section push-left" id="img-hbng">
-                            <img class="image" src="images/hbng.png">
+                            <img class="image shadow-image" src="images/hbng.png">
                         </div>
                         <div class="info-section push-right" id="info-hbng">
                             <h3 class="project-title"><a href="https://github.com/agnanachandran/hbng/">Hipster Band<br>Name Generator</a></h3>
@@ -167,7 +167,7 @@
                     <div class="divider"></div>
                     <div class="project-container">
                         <div class="img-section push-left" id="img-pong">
-                            <img class="image" src="images/pong.png">
+                            <img class="image shadow-image" src="images/pong.png">
                         </div>
                         <div class="info-section push-right" id="info-pong">
                             <h3 class="project-title"><a href="http://pluszero.ca">HTML5 Pong</a></h3>
@@ -181,29 +181,8 @@
                     </div>
                 </div>
 
-                <!--<div class="std-row">-->
-                    <!--<div class="divider"></div>-->
-                    <!--<div class="project-container">-->
-                        <!--<div class="info-section push-left">-->
-                            <!--<h3 class="project-title"><a href="../ruby-on-everything">Ruby on Everything</a></h3>-->
-                            <!--<p class="project-info">Really, I can't even explain why I made this site.<br><br><br><a class="link" href="../ruby-on-everything">Just click it.</a>-->
-                            <!--</p>-->
-                            <!--<h5 class="project-specs-title">TECH STUFF</h5>-->
-                            <!--<p class="project-specs-info">-->
-                                <!--You don't want to know.-->
-                            <!--</p>-->
-                        <!--</div>-->
-                        <!--<div class="img-section push-right">-->
-                            <!--<img class="image" src="images/ruby-on-whales.jpg">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-
             </div>
         </section>
-        <div id="footer">
-            <a href="../">© 2014 Anojh Gnanachandran</a>
-        </div>
         <footer>
             <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
             <script type="text/javascript">
@@ -219,20 +198,29 @@
 
                 // media query change for having info followed by images for each project
                 function widthChange(mq) {
-                    var switchElementNames = ['svblet', 'gradetrackr', 'hbng', 'pong']; // Make sure to add more to this list when more projects are added (only necessary for the ones that are in the 'wrong' order
+
                     if (mq.matches) {
-                        for (var idx = 0; idx < switchElementNames.length; idx++) {
-                            var idSuffix = switchElementNames[idx];
-                            $("#img-" + idSuffix).before($("#info-" + idSuffix));
-                        }
+                        $('#nav-bar').css('position', 'static')
+                        $('h2#title').css('margin-top', '0.2em');
+                    } else {
+                        $('#nav-bar').css('position', 'fixed')
+                        $('h2#title').css('margin-top', '1.3em'); // Must match up with projects.sass' h2#title
                     }
-                    else {
-                        for (var idx = 0; idx < switchElementNames.length; idx++) {
-                            var idSuffix = switchElementNames[idx];
+
+                    var switchElementNames = ['svblet', 'gradetrackr', 'hbng', 'pong']; // Make sure to add more to this list when more projects are added (only necessary for the ones that are in the 'wrong' order
+                    for (var idx = 0; idx < switchElementNames.length; idx++) {
+                        var idSuffix = switchElementNames[idx];
+                        if (mq.matches) { // If it's now a small width
+                            $("#img-" + idSuffix).before($("#info-" + idSuffix));
+                        } else {
                             $("#img-" + idSuffix).after($("#info-" + idSuffix));
                         }
                     }
                 }
+            </script>
+            <script type="text/javascript" src="../js/orig/navbar.js"></script>
+            <script type="text/javascript" charset="utf-8">
+                $("section#nav-bar").autoHidingNavbar();
             </script>
             <script type="text/javascript">
                 var _gaq = _gaq || [];

@@ -1,14 +1,29 @@
 body {
   margin: 0 auto;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  background: -moz-radial-gradient(center, ellipse cover, #009bc6 0%, #0088a6 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #009bc6), color-stop(100%, #0088a6));
+  background: -webkit-radial-gradient(center, ellipse cover, #009bc6 0%, #0088a6 100%);
+  background: -o-radial-gradient(center, ellipse cover, #009bc6 0%, #0088a6 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #009bc6 0%, #0088a6 100%);
+  background: radial-gradient(ellipse at center, #009bc6 0%, #0088a6 100%); }
 
 a {
+  color: #eeeeee;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   text-decoration: none; }
+
+a:hover {
+  color: white;
+  text-decoration: underline; }
 
 .link {
   text-decoration: none;
-  cursor: pointer;
-  color: white; }
+  cursor: pointer; }
 
 p, li {
   font-weight: 300; }
@@ -75,7 +90,11 @@ hr {
   -webkit-margin-after: 0; }
 
 #nav-bar {
-  background-color: rgba(40, 40, 40, 0.5); }
+  background-color: rgba(40, 40, 40, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0; }
 
 nav {
   max-width: 1133px;
@@ -117,7 +136,6 @@ nav ul {
   border-right: none; }
 
 .nav-item a {
-  text-decoration: none;
   color: #e3e3e3;
   -o-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
@@ -140,7 +158,6 @@ nav ul {
   border-color: rgba(150, 150, 150, 0.2); }
 
 body {
-  background: transparent url(../images/black-wings.jpg) repeat center top;
   min-width: 670px; }
 
 .main-content {
@@ -172,28 +189,23 @@ canvas {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2em;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
   display: block;
   opacity: 0; }
 
 #play-pong {
   text-decoration: none;
-  cursor: pointer;
-  color: white; }
+  cursor: pointer; }
 
 #play-pong:hover {
-  color: #eeeeee;
   text-decoration: underline; }
 
 .shimmer {
   font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 3em;
   margin-left: 140px;
-  text-align: center;
   padding: 0 140px 0 0;
   text-align: center;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   background: -webkit-gradient(linear, left top, right top, from(#222222), to(#222222), color-stop(0.5, white));
   background: -moz-gradient(linear, left top, right top, from(#222222), to(#222222), color-stop(0.5, white));
   background: gradient(linear, left top, right top, from(#222222), to(#222222), color-stop(0.5, white));

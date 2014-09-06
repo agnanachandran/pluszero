@@ -1,19 +1,35 @@
 $footer-color: #333333
 $copyright-default: #e3e3e3
-$link: #fff
-$link-hover: #eee
+$link-color: #eee
+$link-hover-color: #fff
 
 body
   margin: 0 auto
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important
+  //background: transparent url(http://api.thumbr.it/whitenoise-200x200.png?background=248ab3ff&noise=626262&density=71&opacity=23) repeat center top
+  background: -moz-radial-gradient(center, ellipse cover, #009bc6 0%, #0088a6 100%)
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#009bc6), color-stop(100%,#0088a6))
+  background: -webkit-radial-gradient(center, ellipse cover, #009bc6 0%,#0088a6 100%)
+  background: -o-radial-gradient(center, ellipse cover, #009bc6 0%,#0088a6 100%)
+  background: -ms-radial-gradient(center, ellipse cover, #009bc6 0%,#0088a6 100%)
+  background: radial-gradient(ellipse at center, #009bc6 0%,#0088a6 100%)
 
-a 
+a
+  color: $link-color
+  -webkit-transition: all 0.5s ease
+  -moz-transition: all 0.5s ease
+  -o-transition: all 0.5s ease
+  -ms-transition: all 0.5s ease
+  transition: all 0.5s ease
   text-decoration: none
+
+a:hover
+  color: $link-hover-color
+  text-decoration: underline
 
 .link
   text-decoration: none
   cursor: pointer
-  color: $link
 
 p, li 
   font-weight: 300

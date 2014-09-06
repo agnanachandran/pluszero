@@ -2,36 +2,27 @@
 @import 'nav'
 
 $navbar-width: 1133px
-$std-gray: #444444
+$std-white: #eeeeee
+
+p
+  color: $std-white
 
 h2#title
   font-size: 3em
   margin: 0 auto
   text-align: center
-  margin-top: 0.5em
-  margin-bottom: 0.5em
-  font-weight: 700
-  color: gray
+  margin-top: 1.3em
+  font-weight: 600
+  color: #ececec
 
-a
-  color: $link
-  -webkit-transition: all 0.5s ease
-  -moz-transition: all 0.5s ease
-  -o-transition: all 0.5s ease
-  -ms-transition: all 0.5s ease
-  transition: all 0.5s ease
-
-a:hover
-  color: $link-hover
-
-.link:hover
+.link
   text-decoration: underline
 
 .project-title
   font-size: 2.5em
+  font-weight: 400
   -webkit-margin-before: 0em
   -webkit-margin-after: 0em
-  margin-top: 0.5em
   margin-bottom: 0.8em
   color: #333
 
@@ -67,13 +58,13 @@ a:hover
   -webkit-margin-after: 0em
   margin-top: 3em
   margin-bottom: 1em
-  color: $std-gray
+  color: $std-white
 
 .project-specs-info
   -webkit-margin-before: 0em
   -webkit-margin-after: 0em
   margin-bottom: 1.5em
-  color: $std-gray
+  color: $std-white
 
 .image
   width: 100%
@@ -84,11 +75,16 @@ a:hover
     margin-left: 0px
     margin-right: 0px
 
+.shadow-image
+  box-shadow: 3px 3px 25px 3px #222222
+
 .std-row
   display: inline-block
   width: 100%
   margin: 0 auto
-  background-image: linear-gradient(rgb(252, 252, 252), rgb(255, 255, 255))
+  margin-top: -5px
+  //background-color: rgba(20,20,20,0.1)
+  
 
 .project-container
   max-width: $navbar-width
@@ -96,8 +92,9 @@ a:hover
   padding-left: 1.5em
   padding-right: 1.5em
 
+// This now does nothing
 .divider
-  background: url(../images/divide.png) no-repeat center -65px
+  //background: url(../images/divide.png) no-repeat center -65px
   height: 55px
   margin: 0 auto
   border: 0
