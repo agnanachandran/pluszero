@@ -22,11 +22,11 @@ $(document).ready(function() {
     var clicked = false;
 
     // Only do opacity animation if not originating from the projects page. TODO: take this out, maybe
-    var oldURL = document.referrer;
-    if (oldURL.indexOf(document.URL + '/projects') === -1 && oldURL.indexOf(document.URL + 'projects') === -1 ) {
-        $('#nav-bar').css('opacity', '0');
-        $('#nav-bar').animate({'opacity': '1'}, '900');
-    }
+    //var oldURL = document.referrer;
+    //if (oldURL.indexOf(document.URL + '/projects') === -1 && oldURL.indexOf(document.URL + 'projects') === -1 ) {
+        //$('#nav-bar').css('opacity', '0');
+        //$('#nav-bar').animate({'opacity': '1'}, '900');
+    //}
     $('#play-pong').click(function() {
         if (!clicked) {
             var $pongCanvas = $('#pong');

@@ -19,7 +19,7 @@
                 <ul>
                     <li class="nav-item"><a href="../" title="Home">home</a></li>	
                     <li class="nav-item"><a href="http://blog.pluszero.ca" title="Things to Think About">blog</a></li>
-                    <li class="nav-item active"><a href="#" title="Projects I've been working on">projects</a></li>
+                    <li class="nav-item active"><a href="#" title="Projects I've worked on">projects</a></li>
                     <li class="nav-item"><a href="../resume/" title="Resume">resume</a></li>
                     <li class="nav-item"><a href="https://github.com/agnanachandran" title="GitHub">github</a></li>
                 </ul>
@@ -190,7 +190,12 @@
                     document.write(unescape("%3Cscript src='../js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
                 }
             </script>
+            <script type="text/javascript" src="../js/orig/navbar.js"></script>
             <script type="text/javascript" charset="utf-8">
+                // TODO: refactor and bring out of this file to own (minified, with everything) js file
+                autoHidingNavbar = $('section#nav-bar');
+                autoHidingNavbar.autoHidingNavbar();
+
                 // media query event handler
                 var mq = window.matchMedia("(max-width: 767px)"); // Should match media query in SASS files
                 mq.addListener(widthChange);
@@ -200,9 +205,13 @@
                 function widthChange(mq) {
 
                     if (mq.matches) {
+                        autoHidingNavbar.autoHidingNavbar('setDisableAutohide', true);
+                        autoHidingNavbar.autoHidingNavbar('show');
                         $('#nav-bar').css('position', 'static')
                         $('h2#title').css('margin-top', '0.2em');
                     } else {
+                        autoHidingNavbar.autoHidingNavbar('setDisableAutohide', false);
+                        autoHidingNavbar.autoHidingNavbar('show');
                         $('#nav-bar').css('position', 'fixed')
                         $('h2#title').css('margin-top', '1.3em'); // Must match up with projects.sass' h2#title
                     }
@@ -217,10 +226,6 @@
                         }
                     }
                 }
-            </script>
-            <script type="text/javascript" src="../js/orig/navbar.js"></script>
-            <script type="text/javascript" charset="utf-8">
-                $("section#nav-bar").autoHidingNavbar();
             </script>
             <script type="text/javascript">
                 var _gaq = _gaq || [];

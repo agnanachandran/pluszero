@@ -95,6 +95,9 @@ hr {
   top: 0;
   right: 0;
   left: 0; }
+  @media screen and (max-width: 767px) {
+    #nav-bar {
+      position: static; } }
 
 nav {
   max-width: 1133px;
