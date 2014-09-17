@@ -18,22 +18,24 @@ ul {
   margin-bottom: 0em; }
 
 section {
-  clear: both; }
+  clear: both;
+  margin-bottom: 0.5em; }
 
 .header {
   overflow: auto; }
 
 #skills-container {
   margin-bottom: 0.7em;
-  -webkit-padding-start: 30px; }
+  padding-left: 1.5em; }
 
 .skill {
   font-family: Roboto, Arial, sans-serif;
   font-weight: 400;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  margin-left: -0.5em; }
 
 li.skills p {
-  font-size: 1.05em; }
+  font-size: 1.1em; }
 
 li.skills {
   margin-bottom: 0.2em; }
@@ -82,7 +84,6 @@ li.skills {
 
 .section-content {
   margin-left: 0.5em;
-  margin-bottom: 0em;
   overflow: auto; }
 
 .title {
@@ -107,7 +108,8 @@ li.skills {
 
 .location {
   font-size: 1.25em;
-  font-weight: 400; }
+  font-weight: 400;
+  margin-bottom: 0.1em; }
 
 .subtitle {
   font-size: 1.1em; }
@@ -136,10 +138,10 @@ ul.list li {
 ul.list li:before {
   display: inline-block;
   content: "•";
-  width: 2em;
-  margin-left: -2em; }
+  width: 1.5em;
+  margin-left: -1.5em; }
 
 .project, .employment, .education {
   overflow: auto;
-  margin-bottom: 0.8em;
-  margin-top: 0.15em; }
+  margin-bottom: 1em;
+  margin-top: 0.2em; }

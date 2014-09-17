@@ -2,7 +2,7 @@
 @import 'nav'
 
 body
-  min-width: 670px // for canvas width
+  min-width: 670px // for canvas width TODO: figure out white space at bottom of mobile
   background-size: cover
 
 .main-content
@@ -16,8 +16,8 @@ h2#shimmer-name
   font-weight: 300
   text-align: center
   @media screen and (max-width: $break-small)
-    font-size: 1.5em
-    margin-top: 50px
+    font-size: 1.8em
+    margin-top: 60px
 
 #sub-title-text
   color: #fcfcfc
@@ -56,8 +56,6 @@ canvas
 // Source: http://codepen.io/redouglas/pen/gobsm
 .shimmer
   font-family: "Open Sans"
-  margin-left: 140px
-  padding: 0 140px 0 0 // Necessary for iteration delay :(
   text-align: center
   color: rgba(255, 255, 255, 0.85)
 

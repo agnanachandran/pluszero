@@ -2,7 +2,7 @@
 <html lang='en'>
   <head>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:700|Roboto:100,300,400,700|Source+Sans+Pro:200,400,600' rel='stylesheet' type='text/css'>
-    <link href='css/styles.css' rel='stylesheet' type='text/css'>
+    <link href='styles.css' rel='stylesheet' type='text/css'>
     <title>Resume</title>
   </head>
   <body>
@@ -28,14 +28,14 @@
         <section>
           <div class='section-header'>Technical Skills</div>
           <div class='section-content' id='technical-skills'>
-            <ul id='skills-container'>
+            <ul class='list' id='skills-container'>
               <li class='skills'>
                 <span class='skill'>Languages:</span>
                 <p>Java, Python, Ruby, Objective-C, C#, C++, SQL</p>
               </li>
               <li class='skills'>
                 <span class='skill'>Web Development:</span>
-                <p>HTML (Haml, erb), CSS (SASS, LESS), JavaScript (CoffeeScript)</p>
+                <p>HTML (Haml, Mako, erb), CSS (SASS, LESS), JavaScript (CoffeeScript)</p>
               </li>
               <li class='skills'>
                 <span class='skill'>Tools and Software:</span>
@@ -49,6 +49,19 @@
           <div class='section-content' id='employment'>
             <div class='employment'>
               <div class='employment-info left'>
+                <div class='title'>Minted (August 2014 - Present)</div>
+                <div class='occupation'>Software Engineer</div>
+                <div class='languages'>Python (Bottle), MySQL, JavaScript, <br> Mako, SCSS</div>
+              </div>
+              <div class='info right'>
+                <ul class='list'>
+                  <li>Collaborated on various features within the engineering fulfillment team</li>
+                  <li>Developed backend APIs to facilitate communication with partnering printers through the Python Bottle framework</li>
+                </ul>
+              </div>
+            </div>
+            <div class='employment'>
+              <div class='employment-info left'>
                 <div class='title'>Pivotal Labs (January - April 2014)</div>
                 <div class='occupation'>Agile Engineer</div>
                 <div class='languages'>iOS, Android, Java, JavaScript</div>
@@ -56,7 +69,7 @@
               <div class='info right'>
                 <ul class='list'>
                   <li>Collaborated in an agile, pair-programming, test-driven-development environment (Jasmine.js, Robolectric)</li>
-                  <li>Developed various features and bug fixes for Android and iOS 7 apps, such as dynamic form creation and validation, and file download management</li>
+                  <li>Developed various features for Android and iOS 7 apps, such as dynamic form creation and validation, and APK download management</li>
                 </ul>
               </div>
             </div>
@@ -68,7 +81,7 @@
               </div>
               <div class='info right'>
                 <ul class='list'>
-                  <li>Wrote various features and bug fixes for Android app including incremental search of user's contacts</li>
+                  <li>Wrote various features for Android app including incremental search of user's contacts</li>
                   <li>Developed front-end improvements to corporate website using Zurb Foundation</li>
                 </ul>
               </div>
@@ -141,7 +154,6 @@
                 <ul class='list'>
                   <li>Engineering Ambassador (January 2013 - Present)</li>
                   <li>Academic Representative (September 2012 - Present)</li>
-                  <li>Dean's Honours List (September 2012 - Present)</li>
                   <li>President's Scholarship of Distinction (June 2012)</li>
                 </ul>
               </div>
