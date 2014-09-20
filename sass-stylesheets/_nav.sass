@@ -13,11 +13,6 @@ $break-small: 767px
 
 #name a
   text-decoration: none
-  -webkit-transition: all 0.5s ease
-  -moz-transition: all 0.5s ease
-  -o-transition: all 0.5s ease
-  -ms-transition: all 0.5s ease
-  transition: all 0.5s ease
   margin-top: 0.25em
   margin-bottom: 0.25em
   font-size: 1.5em
@@ -32,18 +27,15 @@ $break-small: 767px
 .name-link-first
   font-weight: 600
   margin-left: 0.8em
-  -o-transition: all 0.5s linear
-  -moz-transition: all 0.5s linear
-  -khtml-transition: all 0.5s linear
-  -webkit-transition: all 0.5s linear
-  -ms-transition: all 0.5s linear
-  transition: all 0.5s linear
   @media screen and (max-width: $break-small)
     margin-left: 0em
 
 .name-link-second
   font-weight: 300
   margin-left: 0em
+
+.name-link-first:hover
+  color: $name-hover
   -o-transition: all 0.5s linear
   -moz-transition: all 0.5s linear
   -khtml-transition: all 0.5s linear
@@ -51,11 +43,14 @@ $break-small: 767px
   -ms-transition: all 0.5s linear
   transition: all 0.5s linear
 
-.name-link-first:hover
-  color: $name-hover
-
 .name-link-second:hover
   color: $name-hover
+  -o-transition: all 0.5s linear
+  -moz-transition: all 0.5s linear
+  -khtml-transition: all 0.5s linear
+  -webkit-transition: all 0.5s linear
+  -ms-transition: all 0.5s linear
+  transition: all 0.5s linear
 
 hr
   -webkit-margin-before: 0
