@@ -151,16 +151,16 @@ nav ul {
 
 .nav-item a {
   color: #e3e3e3;
+  display: block; }
+
+.nav-item a:hover {
+  color: white;
   -o-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
   -khtml-transition: all 0.5s linear;
   -webkit-transition: all 0.5s linear;
   -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-  display: block; }
-
-.nav-item a:hover {
-  color: white; }
+  transition: all 0.5s linear; }
 
 .nav-item.active a {
   font-weight: bold;
