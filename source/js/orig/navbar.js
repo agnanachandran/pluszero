@@ -20,6 +20,7 @@
       _hideOffset,
       defaults = {
         disableAutohide: false,
+        showOnUpscrollThreshold: -5, // lower means greater upscroll required to show navbar
         showOnUpscroll: true,
         showOnBottom: true,
         hideOffset: 'auto', // "auto" means the navbar height
@@ -74,7 +75,9 @@
         return;
       }
 
-      if (autoHidingNavbar.settings.showOnUpscroll || scrollTop <= _hideOffset) {
+      if (autoHidingNavbar.settings.showOnUpscroll && 
+              scrollDelta <= autoHidingNavbar.settings.showOnUpscrollThreshold
+              || scrollTop <= _hideOffset) {
         show(autoHidingNavbar);
       }
     }
@@ -137,6 +140,7 @@
       };
 
       this.setDisableAutohide(this.settings.disableAutohide);
+      this.setShowOnUpscrollThreshold(this.settings.showOnUpscrollThreshold);
       this.setShowOnUpscroll(this.settings.showOnUpscroll);
       this.setShowOnBottom(this.settings.showOnBottom);
       this.setHideOffset(this.settings.hideOffset);
@@ -149,6 +153,10 @@
     },
     setDisableAutohide: function(value) {
       this.settings.disableAutohide = value;
+      return this.element;
+    },
+    setShowOnUpscrollThreshold: function(value) {
+      this.settings.showOnUpscrollThreshold = value;
       return this.element;
     },
     setShowOnUpscroll: function(value) {
