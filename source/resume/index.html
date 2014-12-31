@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700|Roboto:100,300,400,700|Source+Sans+Pro:200,400,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700|Roboto:300,400,700|Source+Sans+Pro:200,400' rel='stylesheet' type='text/css'>
     <link href='styles.css' rel='stylesheet' type='text/css'>
     <title>Resume</title>
   </head>
@@ -31,7 +31,7 @@
             <ul class='list' id='skills-container'>
               <li class='skills'>
                 <span class='skill'>Languages:</span>
-                <p>Java, Python, Ruby, Objective-C, C#, C++, SQL</p>
+                <p>Java, Python, Ruby, Objective-C, C++, SQL (MySQL, Postgres)</p>
               </li>
               <li class='skills'>
                 <span class='skill'>Web Development:</span>
@@ -39,7 +39,7 @@
               </li>
               <li class='skills'>
                 <span class='skill'>Tools and Software:</span>
-                <p>vim, XCode, Android Studio, Eclipse, Visual Studio</p>
+                <p>vim, XCode, Android Studio, Eclipse, Visual Studio, AWS (EC2, S3, SQS)</p>
               </li>
             </ul>
           </div>
@@ -49,14 +49,15 @@
           <div class='section-content' id='employment'>
             <div class='employment'>
               <div class='employment-info left'>
-                <div class='title'>Minted (August 2014 - Present)</div>
+                <div class='title'>Minted (August - December 2014)</div>
                 <div class='occupation'>Software Engineer</div>
-                <div class='languages'>Python (Bottle), MySQL, JavaScript, <br> Mako, SCSS</div>
+                <div class='languages'>Python (Bottle), MySQL, JavaScript, <br> Mako, SASS</div>
               </div>
               <div class='info right'>
                 <ul class='list'>
-                  <li>Collaborated on various features within the engineering fulfillment team</li>
-                  <li>Developed backend APIs to facilitate communication with partnering printers through the Python Bottle framework</li>
+                  <li>Worked within the fulfillment team and integrated APIs and webhooks with partnering printers</li>
+                  <li>Improved Minted's proprietary delivery estimation algorithm</li>
+                  <li>Created internal webpage to view purchase order details</li>
                 </ul>
               </div>
             </div>
@@ -68,8 +69,8 @@
               </div>
               <div class='info right'>
                 <ul class='list'>
-                  <li>Collaborated in an agile, pair-programming, test-driven-development environment (Jasmine.js, Robolectric)</li>
-                  <li>Developed various features for Android and iOS 7 apps, such as dynamic form creation and validation, and APK download management</li>
+                  <li>Worked on various web and mobile apps and developed features such as dynamic form creation and validation</li>
+                  <li>Developed a templating engine for rapid development and automatic scaffolding of mobile apps that use RESTful APIs.</li>
                 </ul>
               </div>
             </div>
@@ -77,7 +78,7 @@
               <div class='employment-info left'>
                 <div class='title'>BigRoad (May - August 2013)</div>
                 <div class='occupation'>Software Developer</div>
-                <div class='languages'>Android, Java, PostgreSQL, <br> JSP, SCSS, iOS</div>
+                <div class='languages'>Android, Java, Postgres, <br> JSP, SASS, iOS</div>
               </div>
               <div class='info right'>
                 <ul class='list'>
@@ -93,25 +94,37 @@
           <div class='section-content' id='projects'>
             <div class='project'>
               <div class='project-info left'>
-                <div class='title'>graphr (Angular & D3)</div>
-                <div class='languages'>MongoDB, ExpressJS, AngularJS, Node.js, <br> D3.js, HTML, SASS</div>
+                <div class='title'>SoundSurf (Angular)</div>
+                <div class='languages'>MongoDB, Express, AngularJS, Node.js, <br> HTML, SASS</div>
               </div>
               <div class='info right'>
                 <ul class='list'>
-                  <li>Wrote an app to better visualize combinatorial graphs and their algorithms through an interactive graph builder</li>
-                  <li>Created a RESTful, JSON-based, graph retrieval and storage API with Mongoose and ngRoute</li>
+                  <li>Created a web app to play music from YouTube and SoundCloud</li>
+                  <li>Features playlist management, song queuing, incremental search, and Facebook authentication</li>
+                </ul>
+              </div>
+            </div>
+            <div class='project'>
+              <div class='project-info left'>
+                <div class='title'>graphr (Angular & D3)</div>
+                <div class='languages'>MongoDB, Express, AngularJS, Node.js, <br> D3.js, HTML, SASS</div>
+              </div>
+              <div class='info right'>
+                <ul class='list'>
+                  <li>Wrote a web app to visualize combinatorial graphs through an interactive graph builder</li>
+                  <li>Powered by a RESTful API built with Mongoose and ngRoute</li>
                 </ul>
               </div>
             </div>
             <div class='project'>
               <div class='project-info left'>
                 <div class='title'>SVBLET (Ruby on Rails)</div>
-                <div class='languages'>Ruby on Rails, erb, CoffeeScript, <br> SCSS, PostgreSQL</div>
+                <div class='languages'>Ruby on Rails, erb, CoffeeScript, <br> SASS, Postgres</div>
               </div>
               <div class='info right'>
                 <ul class='list'>
-                  <li>Created an elegant, intelligent web app to rent and sublet homes</li>
-                  <li>Implemented features such as multi-file upload with drag-and-drop, front-end design, and form validation</li>
+                  <li>Collaborated on a web app for renting houses and apartments</li>
+                  <li>Implemented multi-file upload with drag-and-drop, front-end design, and form validation</li>
                 </ul>
               </div>
             </div>
@@ -122,8 +135,7 @@
               </div>
               <div class='info right'>
                 <ul class='list'>
-                  <li>Developed and published an Android app to facilitate faster multi-tasking through a rapid, intelligent UI</li>
-                  <li>Incorporates a widget, incremental search, and integration of various APIs</li>
+                  <li>Developed an app that facilitates faster multi-tasking through a rapid, intelligent UX and integration of several APIs</li>
                 </ul>
               </div>
             </div>
@@ -134,7 +146,18 @@
               </div>
               <div class='info right'>
                 <ul class='list'>
-                  <li>Developed and published an app designed to make students' lives easier by managing their grades, schedule, and tasks for them</li>
+                  <li>Collaborated on an app designed to make students' lives easier by managing their grades, schedule, and tasks</li>
+                </ul>
+              </div>
+            </div>
+            <div class='project'>
+              <div class='project-info left'>
+                <div class='title'>Simon Lite (Android/iOS)</div>
+                <div class='languages'>Corona SDK (Lua)</div>
+              </div>
+              <div class='info right'>
+                <ul class='list'>
+                  <li>Developed the memory game Simon featuring multiple difficulty levels and a minimalistic UI</li>
                 </ul>
               </div>
             </div>
@@ -146,7 +169,6 @@
             <div class='education'>
               <div class='education-info left'>
                 <div class='title'>University of Waterloo</div>
-                <div class='location'>Waterloo, ON</div>
                 <div class='subtitle'>Honours Software Engineering (Co-op)</div>
                 <div class='duration'>September 2012 - Present</div>
               </div>

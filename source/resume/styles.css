@@ -9,9 +9,9 @@ p {
   display: inline; }
 
 a {
-  color: black;
+  color: #222222;
   text-decoration: none;
-  border-bottom: 0.08em dotted; }
+  border-bottom: 0.07em solid; }
 
 ul {
   margin-top: 0em;
@@ -19,7 +19,7 @@ ul {
 
 section {
   clear: both;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0em; }
 
 .header {
   overflow: auto; }
@@ -31,22 +31,22 @@ section {
 .skill {
   font-family: Roboto, Arial, sans-serif;
   font-weight: 400;
-  font-size: 1.1em;
+  font-size: 1em;
   margin-left: -0.2em; }
 
 li.skills p {
-  font-size: 1.1em; }
+  font-size: 1em; }
 
 li.skills {
   margin-bottom: 0.2em; }
 
 #name {
   font-family: "Source Sans Pro", Arial, sans-serif;
-  font-size: 3.5em;
-  font-weight: 400;
-  margin-top: 0.3em;
+  font-size: 3em;
+  font-weight: 200;
+  margin: 0.1em;
+  margin-top: 0.1em;
   margin-bottom: 0.2em;
-  margin-left: 0.2em;
   color: #444444;
   float: left; }
 
@@ -62,9 +62,9 @@ li.skills {
   float: right;
   text-align: right;
   font-family: Roboto, Arial, sans-serif;
-  font-weight: 100;
-  font-size: 1.25em;
-  margin-top: 0em; }
+  font-weight: 300;
+  font-size: 1em;
+  margin-bottom: 0.4em; }
 
 .main-content {
   clear: both; }
@@ -80,7 +80,7 @@ li.skills {
   margin-bottom: 0.4em;
   font-family: "Source Sans Pro";
   font-weight: 400;
-  font-size: 1.6em; }
+  font-size: 1.4em; }
 
 .section-content {
   margin-left: 0.5em;
@@ -88,34 +88,34 @@ li.skills {
 
 .title {
   font-family: Roboto, Arial, sans-serif;
-  font-size: 1.25em;
+  font-size: 1.1em;
   font-weight: 400; }
 
 .occupation {
-  font-size: 1.25em;
+  font-size: 1.1em;
   font-family: Roboto, Arial, sans-serif;
   font-weight: 400;
   margin-bottom: 0.1em; }
 
 .languages {
   font-family: Roboto, Arial, sans-serif;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 300; }
 
 .list {
   list-style-type: none;
-  font-size: 1.1em; }
+  font-size: 1em; }
 
 .location {
-  font-size: 1.25em;
-  font-weight: 400;
+  font-size: 1.1em;
+  font-weight: 300;
   margin-bottom: 0.1em; }
 
 .subtitle {
-  font-size: 1.1em; }
+  font-size: 1em; }
 
 .duration {
-  font-size: 1.1em; }
+  font-size: 1em; }
 
 .left {
   float: left;
@@ -132,7 +132,7 @@ ul.list {
   padding-left: 2em; }
 
 ul.list li {
-  line-height: 142%;
+  line-height: 135%;
   margin-bottom: 0.2em; }
 
 ul.list li:before {
