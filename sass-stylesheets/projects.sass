@@ -47,7 +47,7 @@ h2#title
     text-align: center
 
 .img-section
-  padding-top: 0.5em
+  padding-top: 1.5em
   padding-bottom: 0.5em
   width: 45%
   @media screen and (max-width: $break-small)
@@ -56,7 +56,7 @@ h2#title
 .project-specs-title
   -webkit-margin-before: 0em
   -webkit-margin-after: 0em
-  margin-top: 3em
+  margin-top: 2em
   margin-bottom: 1em
   color: $std-white
 
@@ -70,6 +70,7 @@ h2#title
   width: 100%
   height: auto
   display: inline-block
+  @include border-radius(3px)
   @media screen and (max-width: $break-small)
     width: 100%
     margin-left: 0px
@@ -78,13 +79,15 @@ h2#title
 .shadow-image
   box-shadow: 3px 3px 25px 3px #222222
 
+.carousel-default
+  opacity: 0
+
 .std-row
   display: inline-block
   width: 100%
   margin: 0 auto
   margin-top: -5px
   //background-color: rgba(20,20,20,0.1)
-  
 
 .project-container
   max-width: $navbar-width
@@ -102,3 +105,9 @@ h2#title
 
 div#footer
   position: relative
+
+.slick-prev:before
+  content: "◀"
+
+.slick-next:before
+  content: "▶"

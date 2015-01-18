@@ -3,6 +3,12 @@ $copyright-default: #e3e3e3
 $link-color: #eee
 $link-hover-color: #fff
 
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
 body
   margin: 0 auto
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important

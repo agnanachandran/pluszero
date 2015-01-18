@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0 auto;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -101,6 +102,7 @@ hr {
   -webkit-margin-after: 0; }
 
 #nav-bar {
+  z-index: 100;
   background-color: rgba(40, 40, 40, 0.5);
   position: fixed;
   top: 0;
@@ -216,7 +218,7 @@ h2#title {
       text-align: center; } }
 
 .img-section {
-  padding-top: 0.5em;
+  padding-top: 1.5em;
   padding-bottom: 0.5em;
   width: 45%; }
   @media screen and (max-width: 767px) {
@@ -226,7 +228,7 @@ h2#title {
 .project-specs-title {
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
-  margin-top: 3em;
+  margin-top: 2em;
   margin-bottom: 1em;
   color: #eeeeee; }
 
@@ -239,7 +241,11 @@ h2#title {
 .image {
   width: 100%;
   height: auto;
-  display: inline-block; }
+  display: inline-block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px; }
   @media screen and (max-width: 767px) {
     .image {
       width: 100%;
@@ -248,6 +254,9 @@ h2#title {
 
 .shadow-image {
   box-shadow: 3px 3px 25px 3px #222222; }
+
+.carousel-default {
+  opacity: 0; }
 
 .std-row {
   display: inline-block;
@@ -269,3 +278,9 @@ h2#title {
 
 div#footer {
   position: relative; }
+
+.slick-prev:before {
+  content: "◀"; }
+
+.slick-next:before {
+  content: "▶"; }

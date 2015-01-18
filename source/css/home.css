@@ -101,6 +101,7 @@ hr {
   -webkit-margin-after: 0; }
 
 #nav-bar {
+  z-index: 100;
   background-color: rgba(40, 40, 40, 0.5);
   position: fixed;
   top: 0;
@@ -179,14 +180,15 @@ body {
   margin-bottom: 20px;
   text-align: center; }
 
-h2#shimmer-name {
+h2#center-name {
   margin-top: 350px;
-  margin-bottom: -15px;
+  margin-bottom: 0px;
   font-size: 2em;
   font-weight: 300;
-  text-align: center; }
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85); }
   @media screen and (max-width: 767px) {
-    h2#shimmer-name {
+    h2#center-name {
       font-size: 1.8em;
       margin-top: 60px; } }
 
@@ -215,46 +217,3 @@ canvas {
 
 #play-pong:hover {
   text-decoration: underline; }
-
-.shimmer {
-  font-family: "Open Sans";
-  text-align: center;
-  color: rgba(255, 255, 255, 0.85);
-  background: -webkit-gradient(linear, left top, right top, from(#222222), to(#222222), color-stop(0.5, white));
-  background: -moz-gradient(linear, left top, right top, from(#222222), to(#222222), color-stop(0.5, white));
-  background: gradient(linear, left top, right top, from(#222222), to(#222222), color-stop(0.5, white));
-  -webkit-background-size: 125px 100%;
-  -ms-background-size: 125px 100%;
-  -moz-background-size: 125px 100%;
-  -o-background-size: 125px 100%;
-  background-size: 125px 100%;
-  -webkit-background-clip: text;
-  -ms-background-clip: text;
-  -moz-background-clip: text;
-  -o-background-clip: text;
-  background-clip: text;
-  -webkit-animation-name: shimmer;
-  -ms-animation-name: shimmer;
-  -moz-animation-name: shimmer;
-  -o-animation-name: shimmer;
-  animation-name: shimmer;
-  -webkit-animation-duration: 3s;
-  -ms-animation-duration: 3s;
-  -moz-animation-duration: 3s;
-  -o-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-color: #222222; }
-
-@-webkit-keyframes shimmer {
-  0% {
-    background-position: top left; }
-
-  100% {
-    background-position: top right; } }

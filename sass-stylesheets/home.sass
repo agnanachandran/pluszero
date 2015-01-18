@@ -9,12 +9,13 @@ body
   margin-bottom: 20px
   text-align: center
 
-h2#shimmer-name
+h2#center-name
   margin-top: 350px
-  margin-bottom: -15px
+  margin-bottom: 0px
   font-size: 2em
   font-weight: 300
   text-align: center
+  color: rgba(255, 255, 255, 0.85)
   @media screen and (max-width: $break-small)
     font-size: 1.8em
     margin-top: 60px
@@ -45,35 +46,9 @@ canvas
 #play-pong:hover
   text-decoration: underline
 
-// Shimmer effect
 = vendor($prop, $args)
   -webkit-#{$prop}: #{$args}
   -ms-#{$prop}: #{$args}
   -moz-#{$prop}: #{$args}
   -o-#{$prop}: #{$args}
   #{$prop}: #{$args}
-
-// Source: http://codepen.io/redouglas/pen/gobsm
-.shimmer
-  font-family: "Open Sans"
-  text-align: center
-  color: rgba(255, 255, 255, 0.85)
-
-  background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff))
-  background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff))
-  background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff))
-  +vendor(background-size, 125px 100%)
-  +vendor(background-clip, text)
-  +vendor(animation-name, shimmer)
-  +vendor(animation-duration, 3s)
-  +vendor(animation-iteration-count, infinite)
-  background-repeat: no-repeat
-  background-position: 0 0
-  background-color: #222
-
-@-webkit-keyframes shimmer
-  0%
-    background-position: top left
-
-  100%
-    background-position: top right
