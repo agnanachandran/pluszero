@@ -211,9 +211,9 @@ canvas {
   display: block;
   opacity: 0; }
 
-#play-pong {
+#play-game {
   text-decoration: none;
   cursor: pointer; }
 
-#play-pong:hover {
+#play-game:hover {
   text-decoration: underline; }
