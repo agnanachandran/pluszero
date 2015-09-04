@@ -1,7 +1,10 @@
+var trackPositionFunction = null;
+
 function playPong() {
 
     var canvas = document.getElementById('game-canvas');
-    canvas.addEventListener('mousemove', trackPosition); // trackPosition is the callback for the listener
+    trackPositionFunction = trackPosition;
+    canvas.addEventListener('mousemove', trackPositionFunction); // trackPosition is the callback for the listener
     // Check if user has canvas feature with canvas.getContext
     if (canvas.getContext) {
         var ctx = canvas.getContext('2d');

@@ -5,7 +5,7 @@ $(document).ready(function() {
 
     window.requestAnimFrame = (function() {
         return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
-            return window.setTimeout(callback, 1000/45); // fps?
+            return window.setTimeout(callbackForAnimFrame, 1000/45); // fps?
         }
     })();
 
@@ -15,7 +15,9 @@ $(document).ready(function() {
             type = "";
 
         switch(event.type) {
+            case "touchstart":  type="mousedown"; break;        
             case "touchmove":  type="mousemove"; break;        
+            case "touchend":  type="mouseup"; break;        
             default: return;
         }
 
@@ -38,7 +40,8 @@ $(document).ready(function() {
         $canvas[0].addEventListener("touchcancel", touchHandler, true);    
 
         if (!!window.HTMLCanvasElement) { // if we're ready to go
-            if (Math.random() < 0) { // TODO: change
+            clicked = true;
+            if (Math.random() < 0.5) {
                 playPong();
             } else {
                 playGameOfLife();
@@ -48,14 +51,9 @@ $(document).ready(function() {
         }
     };
 
-    setTimeout(function() {
-        animateAndPlayGame();
-    }.bind(this), 1000);
-
     $('#play-game').click(function() {
         if (!clicked) {
             animateAndPlayGame();
-            clicked = true;
         } else {
             window.location = document.getElementById('projects-link').href;
         }
