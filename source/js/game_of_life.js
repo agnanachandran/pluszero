@@ -8,10 +8,14 @@ function playGameOfLife() {
         };
     }
 
-    function mouseMove(e) {
+    function updateMousePosition(e) {
         var mousePos = getMousePos(e);
         mouse.x = mousePos.x;
         mouse.y = mousePos.y;
+    }
+
+    function mouseMove(e) {
+        updateMousePosition(e);
         if (mouseIsDown) {
             checkMouseClick(true);
         }
@@ -151,7 +155,6 @@ function playGameOfLife() {
     };
 
     var mouseHoverUpdate = function() {
-        // console.log(getFocusedGridSquare());
         var selectedCell = getFocusedGridSquare();
         if (selectedCell) {
             var row = selectedCell.row;
@@ -197,9 +200,7 @@ function playGameOfLife() {
         if (selectedCell) {
             var row = selectedCell.row;
             var col = selectedCell.col;
-            console.log(lastToggledCell);
             if (!isFromMouseMove || lastToggledCell.row !== row || lastToggledCell.col !== col) {
-                console.log('wat');
                 grid[row][col] = !grid[row][col];
                 if (isPlaying) {
                     isPlaying = !isPlaying;
@@ -248,7 +249,8 @@ function playGameOfLife() {
         }
     }
 
-    function mouseDown() {
+    function mouseDown(e) {
+        updateMousePosition(e);
         mouseIsDown = true;
         checkMouseClick(false);
     }

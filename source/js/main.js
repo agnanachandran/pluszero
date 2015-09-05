@@ -10,14 +10,15 @@ $(document).ready(function() {
     })();
 
     function touchHandler(event) {
-        var touches = event.changedTouches,
-            first = touches[0],
-            type = "";
+        var touches = event.changedTouches;
+        var first = touches[0];
+        var type = "";
 
         switch(event.type) {
-            case "touchstart":  type="mousedown"; break;        
-            case "touchmove":  type="mousemove"; break;        
-            case "touchend":  type="mouseup"; break;        
+            case "touchstart": type="mousedown"; break;        
+            case "touchmove": type="mousemove"; break;        
+            case "touchend": type="mouseup"; break;        
+            case "touchcancel": type="mouseup"; break;        
             default: return;
         }
 
@@ -36,7 +37,9 @@ $(document).ready(function() {
     var animateAndPlayGame = function(game) {
         var $canvas = $('#game-canvas');
         $canvas.animate({'opacity': '1'}, 'slow');
+        $canvas[0].addEventListener("touchstart", touchHandler, true);    
         $canvas[0].addEventListener("touchmove", touchHandler, true);
+        $canvas[0].addEventListener("touchend", touchHandler, true);    
         $canvas[0].addEventListener("touchcancel", touchHandler, true);    
         $canvas[0].onselectstart = function () { return false; }
 
