@@ -192,13 +192,13 @@ function playGameOfLife() {
         col: null
     };
 
-    function checkMouseClick(shouldCheckLastToggled) {
+    function checkMouseClick(isFromMouseMove) {
         var selectedCell = getFocusedGridSquare();
         if (selectedCell) {
             var row = selectedCell.row;
             var col = selectedCell.col;
             console.log(lastToggledCell);
-            if (!shouldCheckLastToggled || lastToggledCell.row !== row || lastToggledCell.col !== col) {
+            if (!isFromMouseMove || lastToggledCell.row !== row || lastToggledCell.col !== col) {
                 console.log('wat');
                 grid[row][col] = !grid[row][col];
                 if (isPlaying) {
@@ -209,7 +209,7 @@ function playGameOfLife() {
 
             lastToggledCell.row = row;
             lastToggledCell.col = col;
-        } else {
+        } else if (!isFromMouseMove) {
             // Check for button clicks
             if (mouseTouchingButton(PLAY_PAUSE_BUTTON)) {
                 isPlaying = !isPlaying;
@@ -384,7 +384,7 @@ function playGameOfLife() {
         ctx.fillStyle = '#fff';
         ctx.font = '18px Arial';
         if (speed === 10) {
-            ctx.fillText(speed, SPEED_TEXT.x - 4, SPEED_TEXT.y);
+            ctx.fillText(speed, SPEED_TEXT.x - 5, SPEED_TEXT.y);
         } else {
             ctx.fillText(speed, SPEED_TEXT.x, SPEED_TEXT.y);
         }
