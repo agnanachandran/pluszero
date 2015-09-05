@@ -33,27 +33,37 @@ $(document).ready(function() {
 
     var clicked = false;
 
-    var animateAndPlayGame = function() {
+    var animateAndPlayGame = function(game) {
         var $canvas = $('#game-canvas');
         $canvas.animate({'opacity': '1'}, 'slow');
         $canvas[0].addEventListener("touchmove", touchHandler, true);
         $canvas[0].addEventListener("touchcancel", touchHandler, true);    
+        $canvas[0].onselectstart = function () { return false; }
 
         if (!!window.HTMLCanvasElement) { // if we're ready to go
             clicked = true;
-            if (Math.random() < 0.5) {
+            if (game === PONG) {
                 playPong();
-            } else {
+            } else if (game === GAME_OF_LIFE) {
                 playGameOfLife();
             }
             $canvas.animate({'opacity': '1'}, 'slow');
-            $canvas.css('background', 'rgba(255,255,255,0.05)');
+            $canvas.css('background', 'rgba(255,255,255,0.02)');
         }
     };
 
-    $('#play-game').click(function() {
+    var PONG = 'pong';
+    var GAME_OF_LIFE = 'game-of-life';
+    $('#play-pong').click(function() {
         if (!clicked) {
-            animateAndPlayGame();
+            animateAndPlayGame(PONG);
+        } else {
+            window.location = document.getElementById('projects-link').href;
+        }
+    });
+    $('#play-game-of-life').click(function() {
+        if (!clicked) {
+            animateAndPlayGame(GAME_OF_LIFE);
         } else {
             window.location = document.getElementById('projects-link').href;
         }
