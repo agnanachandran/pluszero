@@ -384,9 +384,10 @@ function playGameOfLife() {
     function drawSpeedText() {
         ctx.clearRect(SPEED_TEXT.x-5, SPEED_TEXT.y-15, 30, 30);
         ctx.fillStyle = '#fff';
-        ctx.font = '18px Arial';
+        // ctx.font = '100 18px Arial';
+        ctx.font = '300 18px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif';
         if (speed === 10) {
-            ctx.fillText(speed, SPEED_TEXT.x - 5, SPEED_TEXT.y);
+            ctx.fillText(speed, SPEED_TEXT.x - 6, SPEED_TEXT.y);
         } else {
             ctx.fillText(speed, SPEED_TEXT.x, SPEED_TEXT.y);
         }

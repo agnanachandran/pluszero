@@ -178,7 +178,7 @@ function playPong() {
 
     function updateScore() {
         ctx.fillStyle = "rgba(253, 253, 253, " + roundToThree(loadingAlpha) + ")";
-        ctx.font = "300 40px Open Sans";
+        ctx.font = '300 40px "Open Sans"';
         ctx.textAlign = 'center';
         ctx.fillText(score.toString(), WIDTH/2, HEIGHT/2);
     }
