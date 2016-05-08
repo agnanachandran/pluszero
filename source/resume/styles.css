@@ -34,7 +34,7 @@ ul {
   margin-right: 15px; }
 
 section.card {
-  padding: 15px 15px 22.5px 20px; }
+  padding: 15px 15px 16px 20px; }
 
 .header {
   overflow: auto;
@@ -135,7 +135,8 @@ section.card {
   margin-bottom: 0.1em; }
 
 .interests {
-  font-size: 0.9em; }
+  font-size: 0.9em;
+  line-height: 135%; }
 
 .subtitle {
   font-size: 0.9em;
@@ -170,7 +171,7 @@ ul.list li:before {
 
 .education-info .title {
   margin-bottom: 0.2em;
-  line-height: 130%; }
+  line-height: 135%; }
 
 .contact {
   margin-bottom: 0px; }
@@ -185,7 +186,7 @@ ul.list li:before {
 
 #objective-text {
   font-size: 0.9em;
-  line-height: 130%; }
+  line-height: 135%; }
 
 .last {
   margin-bottom: 0em !important; }
