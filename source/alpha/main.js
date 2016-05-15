@@ -19,6 +19,7 @@
   var counterElement = document.getElementById('counter');
 
   var gameElement = document.getElementById('game');
+  var arrowInstructions = document.getElementById('arrow-instructions');
 
   var scoreElement = document.getElementById('score');
   var endGameTextElement = document.getElementById('end-game-text');
@@ -82,6 +83,8 @@
     updateScore(0);
 
     gameElement.style.display = 'block';
+    arrowInstructions.style.display = 'block';
+
     defaultBackgroundElement.style.opacity = 1;
     failBackgroundElement.style.opacity = 0;
     successBackgroundElement.style.opacity = 0;
@@ -190,6 +193,7 @@
     gameStarted = false;
     counter = MAX_COUNTER;
     gameElement.style.display = 'none';
+    arrowInstructions.style.display = 'none';
   }
 
 })();

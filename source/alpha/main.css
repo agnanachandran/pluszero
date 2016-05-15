@@ -5,6 +5,7 @@
 body {
   font-size: 28px;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  color: white;
 }
 
 .container {
@@ -12,7 +13,6 @@ body {
   top: 15%;
   left: 0;
   right: 0;
-  color: white;
 }
 
 #question {
@@ -26,8 +26,11 @@ body {
 }
 
 #arrow-instructions {
-  margin-top: 150px;
-  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 24px;
 }
 
 #end-game-text {
