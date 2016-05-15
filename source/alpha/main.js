@@ -9,7 +9,7 @@
   var gameStarted = false;
   var gameHasEverBeenStarted = false;
 
-  var MAX_COUNTER = 60;
+  var MAX_COUNTER = 30;
   var counter = MAX_COUNTER;
   var score = 0;
 
