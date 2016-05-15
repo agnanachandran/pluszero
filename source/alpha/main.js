@@ -38,39 +38,63 @@
   var DISTANCE_ARRAY_LENGTH = distanceArray.length;
   var currentDistIndex = 0;
 
-  document.onkeydown = function (e) {
-    // use e.keyCode
-    // Press space
-    if (!gameStarted) {
+  var hammer = new Hammer.Manager(document.body, {
+    recognizers: [
+      [Hammer.Swipe,{ direction: Hammer.DIRECTION_ALL }],
+    ]
+  });
 
-      if (e.keyCode === SPACE_KEY) {
-        if (!gameHasEverBeenStarted) {
-          instructionsElement.style.display = 'none';
-          gameHasEverBeenStarted = true;
-        }
-        startGame();
+  hammer.on('swipe', function(ev) {
+    if (!gameStarted) {
+      if (ev.direction === Hammer.DIRECTION_UP) {
+        spaceKey();
       }
     } else {
-      // Game has been started
-      // Left arrow
-      console.log(e);
-      if (e.keyCode === LEFT_KEY) {
-        if (!currentCorrectAnswer) {
-          correctAnswer();
-        } else {
-          failGame();
-        }
-
-      } else if (e.keyCode === RIGHT_KEY) {
-        if (currentCorrectAnswer) {
-          correctAnswer();
-        } else {
-          failGame();
-        }
+      if (ev.direction === Hammer.DIRECTION_LEFT) {
+        leftArrow();
+      } else if (ev.direction === Hammer.DIRECTION_RIGHT) {
+        rightArrow();
       }
+    }
+  });
 
+
+  document.onkeydown = function (e) {
+    if (!gameStarted) {
+      if (e.keyCode === SPACE_KEY) {
+        spaceKey();
+      }
+    } else {
+      if (e.keyCode === LEFT_KEY) {
+        leftArrow();
+      } else if (e.keyCode === RIGHT_KEY) {
+        rightArrow();
+      }
     }
   };
+
+  function spaceKey() {
+    if (!gameHasEverBeenStarted) {
+      instructionsElement.style.display = 'none';
+      gameHasEverBeenStarted = true;
+    }
+    startGame();
+  }
+  function leftArrow() {
+    if (!currentCorrectAnswer) {
+      correctAnswer();
+    } else {
+      failGame();
+    }
+  }
+
+  function rightArrow() {
+    if (currentCorrectAnswer) {
+      correctAnswer();
+    } else {
+      failGame();
+    }
+  }
 
   function decrementCounterAndUpdateDOM() {
     counter--;
@@ -141,7 +165,6 @@
 
     var firstLetter = ALPHABET[firstIndex];
     var secondLetter = ALPHABET[secondIndex];
-    console.log(isCorrect);
 
     firstLetterElement.innerHTML = firstLetter;
     secondLetterElement.innerHTML = secondLetter;
