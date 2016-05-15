@@ -1,0 +1,76 @@
+.center {
+  text-align: center;    
+}
+
+body {
+  font-size: 28px;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.container {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  color: white;
+}
+
+#question {
+  margin-top: 100px;
+  font-size: 40px;
+}
+
+#score {
+  margin-top: 150px;
+  font-size: 40px;
+}
+
+#arrow-instructions {
+  margin-top: 150px;
+  font-size: 14px;
+}
+
+#end-game-text {
+  -moz-transition: all 0.5s ease-in;
+  /* WebKit */
+  -webkit-transition: all 0.5s ease-in;
+  /* Opera */
+  -o-transition: all 0.5s ease-in;
+  /* Standard */
+  transition: all 0.5s ease-in;
+}
+
+.bg {
+  -moz-transition: all 0.5s ease-in;
+  /* WebKit */
+  -webkit-transition: all 0.5s ease-in;
+  /* Opera */
+  -o-transition: all 0.5s ease-in;
+  /* Standard */
+  transition: all 0.5s ease-in;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+#defaultbg {
+  background: #16222A; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #16222A , #3A6073); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #16222A , #3A6073); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* Firefox */
+}
+
+#successbg {
+  background: #B24592; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #B24592 , #F15F79); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #B24592 , #F15F79); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#failbg {
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #232526 , #414345); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #232526 , #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>alpha</title>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body class="center">
+    <div id="defaultbg" class="bg"></div>
+    <div id="successbg" class="bg" style="opacity: 0"></div>
+    <div id="failbg" class="bg" style="opacity: 0"></div>
+    <div class="container">
+      <div id="instructions">
+        Remembering the order of letters in the English alphabet can be difficult. How good are you?<br><br>
+
+        Press Space to Start.
+      </div>
+
+      <div id="game" style="display: none;">
+        <div id="counter"></div>
+        <div id="question">
+          Does
+          <span id="first"></span>
+          come after
+          <span id="second"></span>
+          ?
+        </div>
+
+        <div id="score">
+          0
+        </div>
+
+        <div id="arrow-instructions">
+          Press the left arrow key to answer No. Press the right arrow key to answer Yes.
+        </div>
+
+      </div>
+
+      <div id="end-game-text" style="opacity: 0;">
+      </div>
+    </div>
+
+
+
+    <footer>
+      <script type="text/javascript" src="main.js"></script>
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+        _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+        _gaq.push(['_setAccount', 'UA-37973526-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    </footer>
+  </body>
+
+</html>
+
