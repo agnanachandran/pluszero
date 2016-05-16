@@ -15,6 +15,12 @@ body {
   right: 0;
 }
 
+#facebook {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 #question {
   margin-top: 100px;
   font-size: 40px;
