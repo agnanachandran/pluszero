@@ -2,8 +2,8 @@
   var SPACE_KEY = 32;
   var LEFT_KEY = 37;
   var RIGHT_KEY = 39;
-  var Y_KEY = 89;
-  var N_KEY = 78;
+  var A_KEY = 65;
+  var D_KEY = 69;
 
   var ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
   var MIN_DIST = 3;
@@ -67,9 +67,9 @@
         spaceKey();
       }
     } else {
-      if (e.keyCode === LEFT_KEY || e.keyCode === N_KEY) {
+      if (e.keyCode === LEFT_KEY || e.keyCode === A_KEY) {
         leftArrow();
-      } else if (e.keyCode === RIGHT_KEY || e.keyCode === Y_KEY) {
+      } else if (e.keyCode === RIGHT_KEY || e.keyCode === D_KEY) {
         rightArrow();
       }
     }
