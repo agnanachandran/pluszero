@@ -24,6 +24,7 @@
   var arrowInstructions = document.getElementById('arrow-instructions');
 
   var scoreElement = document.getElementById('score');
+  var endGameContainerElement = document.getElementById('end-game-container');
   var endGameTextElement = document.getElementById('end-game-text');
 
   var defaultBackgroundElement = document.getElementById('defaultbg');
@@ -60,6 +61,13 @@
     }
   });
 
+  firstLetterElement.addEventListener('click', function() {
+    leftArrow();
+  });
+
+  secondLetterElement.addEventListener('click', function() {
+    rightArrow();
+  });
 
   document.onkeydown = function (e) {
     if (!gameStarted) {
@@ -115,7 +123,7 @@
     failBackgroundElement.style.opacity = 0;
     successBackgroundElement.style.opacity = 0;
     endGameTextElement.innerHTML = '';
-    endGameTextElement.style.opacity = 0;
+    endGameContainerElement.style.opacity = 0;
 
     decrementCounterAndUpdateDOM();
     interval = setInterval(function() {
@@ -213,7 +221,7 @@
 
     endGameTextElement.innerHTML += endGameText;
 
-    endGameTextElement.style.opacity = 1;
+    endGameContainerElement.style.opacity = 1;
 
     gameStarted = false;
     counter = MAX_COUNTER;

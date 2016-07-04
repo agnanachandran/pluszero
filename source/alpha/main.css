@@ -16,9 +16,7 @@ body {
 }
 
 #facebook {
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin-bottom: 50px;
 }
 
 #question {
@@ -26,8 +24,16 @@ body {
   font-size: 40px;
 }
 
+#first {
+  cursor: pointer;
+}
+
+#second {
+  cursor: pointer;
+}
+
 #score {
-  margin-top: 150px;
+  margin-top: 90px;
   font-size: 40px;
 }
 
