@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700|Roboto:300,400,700|Noto+Serif:400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:300,400,700|Karla:400,700' rel='stylesheet' type='text/css'>
     <link href='styles.css' rel='stylesheet' type='text/css'>
     <title>Resume</title>
   </head>
@@ -9,13 +9,20 @@
     <div id='resume-container'>
       <div class='header card'>
         <h1 id='name'>
-          Anojh
-          <span id='last-name'>Gnanachandran</span>
+          Anojh Gnanachandran
         </h1>
       </div>
       <div class='left-content'>
         <section class='card'>
-          <div class='section-header'>Contact</div>
+          <div class='section-heading'>About Me</div>
+          <div class='section-content' id='objective-text'>
+            Hi! I'm Anojh, a Canadian software engineer currently based out of San Francisco.
+            <br><br> I love creating beautiful, functional web experiences, and thinking
+            critically about the product and design decisions that go into the things I make.
+          </div>
+        </section>
+        <section class='card'>
+          <div class='section-heading'>Contact</div>
           <div class='section-content' id='contact'>
             <div class='contact'>
               <div class='email'>
@@ -24,125 +31,106 @@
               <div class='site'>
                 <a href='http://www.pluszero.ca'>pluszero.ca</a>
               </div>
-              <div class='github last'>
+              <div class='github'>
                 <a href='http://www.github.com/agnanachandran'>github.com/agnanachandran</a>
               </div>
             </div>
           </div>
         </section>
         <section class='card'>
-          <div class='section-header'>About Me</div>
-          <div class='section-content' id='objective-text'>
-            Hi! I'm a recent software engineering graduate seeking a full-time position starting Fall 2017. <br><br> I'd love to learn more about artificial intelligence and machine learning.<br><br>I'm an avid vim user, and my favourite programming language is Python.
+          <div class='section-heading'>Languages & Frameworks</div>
+          <div class='section-content languages'>
+            Python, Java, JavaScript (React, Node), HTML, CSS
           </div>
         </section>
         <section class='card'>
-          <div class='section-header'>Technical Skills</div>
-          <div class='section-content' id='technical-skills'>
-            <div id='skills-container'>
-              <div class='skills'>
-                <div class='skill'>Languages & Frameworks</div>
-                <p>Python, C++, JavaScript (React, Angular), Ruby (Rails), Swift (iOS), and Java (Android)</p>
-              </div>
-              <div class='skills last'>
-                <div class='skill'>Tools & Software</div>
-                <p>vim, XCode, Android Studio, Eclipse, Visual Studio, AWS, Appengine</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class='card'>
-          <div class='section-header'>Education</div>
+          <div class='section-heading'>Education</div>
           <div class='section-content' id='education'>
-            <div class='education last'>
+            <div class='education'>
               <div class='education-info'>
-                <div class='title'>Honours Software Engineering <br>(Co-op) @ University of Waterloo</div>
+                <div class='title'>
+                  <a href='https://uwaterloo.ca'>Honours Software Engineering @ University of Waterloo</a>
+                </div>
                 <div class='duration'>September 2012 - April 2017</div>
               </div>
               <div class='info'>
                 <ul class='list'>
-                  <li>Academic Representative <br>September 2012 - April 2015</li>
-                  <li class='last'>President's Scholarship of Distinction <br>June 2012</li>
+                  <li>Graduated with Distinction - Dean's Honours List</li>
                 </ul>
               </div>
             </div>
           </div>
         </section>
         <section class='card'>
-          <div class='section-header'>Interests</div>
+          <div class='section-heading'>Interests</div>
           <div class='section-content' id='interests'>
-            <div class='interests'>I enjoy playing volleyball, working out, solving puzzles, and meeting new people.</div>
+            <div class='interests'>I enjoy playing volleyball, solving escape rooms, and trying new things.</div>
           </div>
         </section>
       </div>
       <div class='right-content'>
         <section class='card'>
-          <div class='section-header'>Employment</div>
-          <div class='section-content' id='employment'>
+          <div class='section-heading'>Employment</div>
+          <div class='section-content'>
             <div class='employment'>
               <div class='employment-info'>
                 <div class='title'>
-                  Software Engineering Intern @
-                  <a href='https://www.benchling.com'>Benchling</a>
+                  <a href='https://heapanalytics.com'>Software Engineer @ Heap</a>
+                </div>
+                <div class='duration'>September 2017 - Present</div>
+              </div>
+              <div class='info'>
+                <ul class='list'>
+                  <li>Developed various full-stack solutions with React and TypeScript to support Heap's analysis, and data organization/governance layers</li>
+                  <li>Significantly improved dropdown rendering performance through intelligent caching</li>
+                  <li>Developed natural language query interface with autocomplete functionality for hack-week project</li>
+                </ul>
+              </div>
+            </div>
+            <div class='employment'>
+              <div class='employment-info'>
+                <div class='title'>
+                  <a href='https://benchling.com'>Software Engineering Intern @ Benchling</a>
                 </div>
                 <div class='duration'>September - December 2016</div>
               </div>
               <div class='info'>
                 <ul class='list'>
-                  <li>Developed software to allow better collaboration within Benchling's suite of life science tools</li>
+                  <li>Developed features in React to allow for better collaboration within Benchling's suite of life science tools</li>
+                  <li>Used "EXPLAIN ANALYZE" to debug expensive database queries and speed them up by over 5x using indices</li>
                 </ul>
               </div>
             </div>
             <div class='employment'>
               <div class='employment-info'>
                 <div class='title'>
-                  Software Engineering Intern @
-                  <a href='https://www.palantir.com'>Palantir</a>
+                  <a href='https://palantir.com'>Software Engineering Intern @ Palantir</a>
                 </div>
                 <div class='duration'>January - April 2016</div>
               </div>
               <div class='info'>
                 <ul class='list'>
-                  <li>Developed an internal webapp in React for resourcing operations to match Palantir employees to deployments around the world</li>
-                  <li>Designed and implemented a feature to export a business's financial transaction data to various formats for further analysis</li>
+                  <li>Developed a feature in React Native to export financial transaction data to various formats for further analysis</li>
                 </ul>
               </div>
             </div>
             <div class='employment'>
               <div class='employment-info'>
                 <div class='title'>
-                  Software Engineering Intern @
-                  <a href='https://www.snapchat.com'>Snapchat</a>
+                  <a href='https://snap.com'>Software Engineering Intern @ Snap</a>
                 </div>
                 <div class='duration'>May - August 2015</div>
               </div>
               <div class='info'>
                 <ul class='list'>
-                  <li>Designed and implemented A/B test console in Angular for viewing, creating, and editing tests</li>
-                  <li>Created metric to measure Android UI latency and reduced ViewPager swipe latency by over 50% on low-end phones</li>
-                  <li>Developed UI automation framework for performance regression detection</li>
+                  <li>Designed and implemented a web console in Angular for viewing, creating, and editing A/B tests</li>
                 </ul>
               </div>
             </div>
             <div class='employment'>
               <div class='employment-info'>
                 <div class='title'>
-                  Software Engineering Intern @
-                  <a href='http://www.minted.com'>Minted</a>
-                </div>
-                <div class='duration'>August - December 2014</div>
-              </div>
-              <div class='info'>
-                <ul class='list'>
-                  <li>Worked on the fulfillment team and integrated APIs and webhooks with partnering printers</li>
-                </ul>
-              </div>
-            </div>
-            <div class='employment last'>
-              <div class='employment-info'>
-                <div class='title'>
-                  Software Engineering Intern @
-                  <a href='https://www.pivotallabs.com'>Pivotal Labs</a>
+                  <a href='https://pivotal.io/labs'>Software Engineering Intern @ Pivotal Labs</a>
                 </div>
                 <div class='duration'>January - April 2014</div>
               </div>
@@ -155,41 +143,31 @@
           </div>
         </section>
         <section class='card'>
-          <div class='section-header'>Projects</div>
+          <div class='section-heading'>Personal Projects</div>
           <div class='section-content' id='projects'>
             <div class='project'>
               <div class='project-info'>
                 <div class='title'>
-                  <a href='https://www.interncompass.io'>InternCompass.io (React/Rails)</a>
+                  <a href='https://interncompass.io'>InternCompass.io (React/Rails)</a>
                 </div>
               </div>
               <div class='info'>
                 <ul class='list'>
-                  <li>Collaborated on a platform for students to discover companies and read internship reviews written by their peers</li>
-                  <li>Won CUSEC 2017 UI/UX Award and received over 150 000 total pageviews</li>
+                  <li>Led development on a platform for students to discover companies and write/read internship reviews</li>
+                  <li>Won CUSEC UI/UX Award and received over 400 000 total pageviews</li>
                 </ul>
               </div>
             </div>
             <div class='project'>
               <div class='project-info'>
                 <div class='title'>
-                  <a href='http://www.soundsurf.io'>SoundSurf.io (Angular/Node)</a>
+                  <a href='http://soundsurf.io'>SoundSurf.io (Angular/Node)</a>
                 </div>
               </div>
               <div class='info'>
                 <ul class='list'>
-                  <li>Created a web app to play music from YouTube and SoundCloud featuring playlist management, song queuing, autocomplete, and Google/Facebook authentication</li>
+                  <li>Created a web app to play music from YouTube and SoundCloud featuring playlist management, song queuing, and Google/Facebook authentication</li>
                   <li>Featured on two blogs and received over 50 000 total pageviews</li>
-                </ul>
-              </div>
-            </div>
-            <div class='project last'>
-              <div class='project-info'>
-                <div class='title'>emotive (Android)</div>
-              </div>
-              <div class='info'>
-                <ul class='list'>
-                  <li>Designed and developed an app that facilitates fast multi-tasking through integration of various APIs</li>
                 </ul>
               </div>
             </div>
